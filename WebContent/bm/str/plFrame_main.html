@@ -1,0 +1,18 @@
+<HTML>
+<HEAD>
+<TITLE> BOM 등록/수정 Frame</TITLE>
+</HEAD>
+
+<FRAMESET framespacing="3" border="1" bordercolor=black cols="*" frameborder="0">
+	<FRAMESET rows="*,135">
+		<FRAMESET cols="250,*">
+			<FRAME name="search" target="search" src="../../servlet/BomInputServlet?mode=fg_search" scrolling="no">
+			<FRAME name="tree" target="tree" src="../../servlet/BomInputServlet?mode=pl_list" scrolling="no" >
+		</FRAMESET>
+		<FRAME name="reg" target="reg" src="../../servlet/BomInputServlet?mode=pl_prewrite" scrolling="no" noresize> 
+	</FRAMESET>
+
+<NOFRAMES>
+<BODY></BODY>
+</NOFRAMES>
+</HTML>

@@ -1,0 +1,54 @@
+UNKNOWN {
+	COLOR: #5159ff; TEXT-DECORATION: none
+}
+A:link {
+	COLOR: #565656; TEXT-DECORATION: none; COLOR: #4991DD;
+}
+A:active {
+	COLOR: #565656; TEXT-DECORATION: none;
+}
+A:visited {
+	COLOR: #565656; TEXT-DECORATION: none; COLOR: #4991DD;
+}
+A:hover {
+	COLOR: #4991DD; TEXT-DECORATION: underline;
+}
+TD {
+	FONT: 8pt/16px Verdana,奔覆,Gulim
+}
+BODY {
+	scrollbar-face-color:#FFFFFF;
+	scrollbar-highlight-color: #aaaaaa;
+	scrollbar-3dlight-color: #FFFFFF;
+	scrollbar-shadow-color: #aaaaaa;
+	scrollbar-darkshadow-color: #FFFFFF;
+	scrollbar-track-color: #FFFFFF;
+	scrollbar-arrow-color: #aaaaaa;
+}
+/* 其捞瘤 力格 */
+.title {
+	COLOR:#0B2C55;FONT WEIGHT : bolder;font-size: 9pt;padding-left:5px;
+}
+/* 格废 力格 */
+.list_title {
+	COLOR:#4D91DC;FONT WEIGHT : bolder;font-size: 9pt;background-color:#EFF0F5 ;
+}
+/*格废 郴侩*/
+.list_bg   {
+	COLOR:#565656;font-size: 9pt;
+}
+/* 亲格 力格 */
+.bg_01   {
+	COLOR:#4D91DC;FONT WEIGHT : bolder;font-size: 9pt;padding-left:10px;
+}
+.bg_03   {
+	COLOR:#4D91DC;FONT WEIGHT : bolder;font-size: 9pt;padding-left:10px;
+}
+/* 亲格 郴侩 */
+.bg_02   {
+	COLOR:#565656;font-size: 9pt;padding-left:10px;background-color:#F5F5F5;
+}
+.bg_04   {
+	COLOR:#565656;font-size: 9pt;padding-left:10px;background-color:#F5F5F5;
+}
+

@@ -1,0 +1,17 @@
+SELECT   a.*, b.item_desc, c.name,c.name2  
+FROM      pu_item_supply_info a, item_master b, maker_code_table c
+WHERE    a.item_code= b.item_no AND a.supplyer_code = c.code AND b.item_desc like 'CHIP%'
+
+
+2.
+SELECT   a.*, b.item_desc AS Expr1, c.name AS Expr2, c.name2 AS Expr3
+FROM      pu_item_supply_info a INNER JOIN
+                item_master b ON a.item_code = b.item_no INNER JOIN
+                maker_code_table c ON a.supplyer_code = c.code
+WHERE   (b.item_desc LIKE '%cc%')
+
+3.
+
+
+
+mid,a.item_code,a.supplyer_code,a.supplyer_name,a.order_weight,a.lead_time,a.is_trade_now,a.is_main_supplyer,a.min_order_quantity,a.max_order_quantity, a.order_unit,a.supplyer_item_code,a.supplyer_item_name,a.supplyer_item_desc,a.maker_name,a.supply_unit_cost

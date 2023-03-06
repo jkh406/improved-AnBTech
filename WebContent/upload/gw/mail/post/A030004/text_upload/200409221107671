@@ -1,0 +1,11 @@
+<html><head><title>알림</title><META http-equiv=Content-Type content="text/html; charset=euc-kr"></head><body><br><br><br><br>	  <p align='center'><a href="#" onclick="javascript:wopen('../servlet/CbomProcessServlet?mode=ecc_app_mail&pid=200409221103453&eco_no=ECR0409-004','audit_view','800','600','scrollbars=yes,toolbar=no,status=yes,resizable=no');">상세내용보기</a></td></body></html><script language=javascript>
+<!-- 
+function wopen(url, t, w, h, s) { 
+var sw; 
+var sh; 
+sw = (screen.Width - w) / 2; 
+sh = (screen.Height - h) / 2 - 50; 
+window.open(url, t, 'Width='+w+'px, Height='+h+'px, Left='+sw+', Top='+sh+','+s);
+} 
+ -->
+</script>

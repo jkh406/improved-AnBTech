@@ -1,0 +1,9 @@
+1. jar 파일 만들기
+jar cf JWSDemo.jar *.class
+
+2.보안key 만들기
+keytool -genkey -alias SignedJWSDemo -keystore nserstore -keypass kwangshin -dname "cn=N'ser Community Inc." -storepass rndlab
+
+3.보안서명파일만들기
+jarsigner -keystore nserstore -storepass rndlab -keypass kwangshin -signedjar SignedJWSDemo.jar JWSDemo.jar SignedJWSDemo
+

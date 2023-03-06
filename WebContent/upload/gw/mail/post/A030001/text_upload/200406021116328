@@ -1,0 +1,2 @@
+<html><head><title>공문</title></head> <script> function contentAppview(id,app_id){ sParam="strSrc=OfficialDocumentServlet&mode=OFD_A&id="+id+"&doc_id="+app_id
+ var rval = showModalDialog("http://192.168.1.103/anb/ods/DocModalFrm.jsp?"+sParam,"","dialogWidth:720px;dialogHeight:750px;toolbar=0;location=0;directories=0;status=0;menuBar=0;scrollBars=0;resizable=0" )}</script><body>공문 내용입니다.<br>상세내용은 아래제목을 클릭하세요.<br><br><br><a href="javascript:contentAppview('200406021108109','200406021114625');">근무기강확립지시</a></body></html>

@@ -1,0 +1,70 @@
+
+
+ODBCConf called with arguments: '/S /Lv odbcconf.log /F C:\WINNT\system32\mdaccore.rsp'
+Data Struct:
+	Reboot First       : 0
+	Use Response File  : 1
+	Response File      : 'C:\WINNT\system32\mdaccore.rsp'
+	Erase Response File: 0
+	Silent             : 1
+	Continue on Error  : 0
+	Log Mode           : 2
+	Log File           : 'odbcconf.log'
+	Actions:
+		8, '(null)', '(null)', ''
+		6, 'MS Code Page Translator|Translator=MSCPXL32.dll||', '(null)', '"MS Code Page Translator|Translator=MSCPXL32.dll||"'
+		5, 'Microsoft ODBC for Oracle|Driver=msorcl32.dll|Setup=msorcl32.dll||', '(null)', '"Microsoft ODBC for Oracle|Driver=msorcl32.dll|Setup=msorcl32.dll||"'
+		1, 'Microsoft ODBC for Oracle', 'CPTimeout=60', '"Microsoft ODBC for Oracle" "CPTimeout=60"'
+EXECUTING ACTIONS
+
+Executing Action: INSTALLDRVRMGR
+		 arg1: '(null)'
+		 arg2: '(null)'
+		 args: ''
+Install Driver Manager  succeeded
+		 Return HR: 0x0
+
+Executing Action: INSTALLTRANSLATOR
+		 arg1: 'MS Code Page Translator|Translator=MSCPXL32.dll||'
+		 arg2: '(null)'
+		 args: '"MS Code Page Translator|Translator=MSCPXL32.dll||"'
+INSTALLTRANSLATOR  SQLInstallTranslatorEx succeeded
+		 Return HR: 0x0
+
+Executing Action: INSTALLDRIVER
+		 arg1: 'Microsoft ODBC for Oracle|Driver=msorcl32.dll|Setup=msorcl32.dll||'
+		 arg2: '(null)'
+		 args: '"Microsoft ODBC for Oracle|Driver=msorcl32.dll|Setup=msorcl32.dll||"'
+INSTALLDRIVER  SQLInstallDriverEx succeeded
+		 Return HR: 0x0
+
+Executing Action: CONFIGDRIVER
+		 arg1: 'Microsoft ODBC for Oracle'
+		 arg2: 'CPTimeout=60'
+		 args: '"Microsoft ODBC for Oracle" "CPTimeout=60"'
+CONFIGDRIVER  SQLConfigDriver succeeded
+		 Return HR: 0x0
+
+
+ODBCConf called with arguments: '/S /Lv odbcconf.log /F C:\WINNT\system32\redist.rsp'
+Data Struct:
+	Reboot First       : 0
+	Use Response File  : 1
+	Response File      : 'C:\WINNT\system32\redist.rsp'
+	Erase Response File: 0
+	Silent             : 1
+	Continue on Error  : 0
+	Log Mode           : 2
+	Log File           : 'odbcconf.log'
+	Actions:
+		7, '2.60.6526.3', '(null)', '"2.60.6526.3"'
+EXECUTING ACTIONS
+
+Executing Action: REGMDACVERSION
+		 arg1: '2.60.6526.3'
+		 arg2: '(null)'
+		 args: '"2.60.6526.3"'
+REGMDACVERSION  Version: '2.60.6526.3'
+REGMDACVERSION  Update FullInstallVer value from '2.53.6200.1' to '2.60.6526.3'
+REGMDACVERSION  Setting FullInstallVer key to '2.60.6526.3'
+		 Return HR: 0x0

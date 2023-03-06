@@ -1,0 +1,119 @@
+<HTML><HEAD><TITLE>Plusware 3.0</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=euc-kr">
+<STYLE type=text/css>A:link {
+	COLOR: #454440; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #454440; TEXT-DECORATION: none
+}
+A:active {
+	COLOR: #07367d; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #4370b1; TEXT-DECORATION: none
+}
+BODY {
+	FONT: 9pt/140% 굴림; COLOR: #454440
+}
+TD {
+	FONT: 9pt/140% 굴림; COLOR: #454440
+}
+inkform {
+	BORDER-RIGHT: #778899 1px solid; BORDER-TOP: #778899 1px solid; FONT: 9pt 굴림; BORDER-LEFT: #778899 1px solid; COLOR: #004cb3; BORDER-BOTTOM: #778899 1px solid; BACKGROUND-COLOR: #ffffff
+}
+text {
+	BORDER-TOP-WIDTH: 1px; BORDER-LEFT-WIDTH: 1px; BORDER-LEFT-COLOR: #a5a5a5; BORDER-BOTTOM-WIDTH: 1px; BORDER-BOTTOM-COLOR: #a5a5a5; FONT: 9pt 굴림; COLOR: #4e4e4e; BORDER-TOP-COLOR: #a5a5a5; BACKGROUND-COLOR: #ffffff; BORDER-RIGHT-WIDTH: 1px; BORDER-RIGHT-COLOR: #a5a5a5; solid: no
+}
+search {
+	BORDER-TOP-WIDTH: 1px; FONT-WEIGHT: normal; BORDER-LEFT-WIDTH: 1px; FONT-SIZE: 9pt; BORDER-LEFT-COLOR: #a5a5a5; BORDER-BOTTOM-WIDTH: 1px; BORDER-BOTTOM-COLOR: #a5a5a5; COLOR: #4e4e4e; BORDER-TOP-COLOR: #a5a5a5; LINE-HEIGHT: normal; FONT-STYLE: normal; BACKGROUND-COLOR: #ffffff; BORDER-RIGHT-WIDTH: 1px; FONT-VARIANT: normal; BORDER-RIGHT-COLOR: #a5a5a5
+}
+INPUT {
+	BORDER-TOP-WIDTH: 1px; BORDER-LEFT-WIDTH: 1px; BORDER-LEFT-COLOR: #a5a5a5; BORDER-BOTTOM-WIDTH: 1px; BORDER-BOTTOM-COLOR: #a5a5a5; FONT: 9pt 굴림; COLOR: #4e4e4e; BORDER-TOP-COLOR: #a5a5a5; BORDER-RIGHT-WIDTH: 1px; BORDER-RIGHT-COLOR: #a5a5a5
+}
+BUTTON {
+	BORDER-RIGHT: #d0d0d0 1px ridge; BORDER-TOP: #d0d0d0 1px ridge; BORDER-LEFT: #d0d0d0 1px ridge; BORDER-BOTTOM: #d0d0d0 1px ridge; HEIGHT: 20px; BACKGROUND-COLOR: #ccffcc
+}
+intext {
+	FONT: 9pt 굴림; COLOR: black
+}
+BODY {
+	SCROLLBAR-FACE-COLOR: #e2e2e2; SCROLLBAR-SHADOW-COLOR: #9b9b9b; SCROLLBAR-3DLIGHT-COLOR: #9b9b9b; SCROLLBAR-ARROW-COLOR: #ffffff; SCROLLBAR-DARKSHADOW-COLOR: #ffffff; SCROLLBAR-BASE-COLOR: #e2e2e2
+}
+</STYLE>
+
+<SCRIPT language=javascript>
+	var old_obj = ""
+
+	function init(){
+		//Load.style.display = "none"
+		Body.style.display = ""
+	}
+</SCRIPT>
+
+<SCRIPT language=JavaScript src="BbsLeft.files/fnShowTree.js"></SCRIPT>
+<!--**********Tree스크립트를 사용하여면 다음을 꼭 추가시켜 주셔야 합니다.**********************-->
+<SCRIPT language=JavaScript>
+//var	cstrTree_PATH		= "http://" + "kms.plusware.co.kr/Plus2003/Common/TreeJs/";
+//var	bExpandFolder		= false;
+//var	bstrFalg			= "bbs";
+</SCRIPT>
+<!--
+<SCRIPT language=JavaScript src="lib/function.js"></SCRIPT>
+-->
+<META content="MSHTML 6.00.2800.1170" name=GENERATOR></HEAD>
+<BODY leftMargin=0 topMargin=0 marginheight="0" marginwidth="0">
+<TABLE height="100%" cellSpacing=0 cellPadding=0 width=195 border=0>
+  <TBODY>
+  <TR>
+    <TD style="PADDING-LEFT: 15px; PADDING-TOP: 10px" vAlign=top 
+    background='img/left_bg.gif'>
+<!--내용 시작
+	  <FORM name=frmData onsubmit="return false" action=BbsLst.asp method=post 
+      target=up><INPUT type=hidden value=off name=hidPreview>
+      <SCRIPT language=javascript>
+				strPreview = document.frmData.hidPreview.value;
+				foldersTree=gFld("회사게시판","");			
+			
+
+						aux1 = insFld(foldersTree, gLnk("0","최근게시물", "BbsLst.asp?strClass=B&Empower=N&chkPreview="+ strPreview +"&RootCD=1&BoardCD=&BbsName=최근게시물&TotalPath=회사게시판 > 최근게시물") ) ;
+
+						aux1 = insFld(foldersTree, gLnk("0","공지사항", "BbsLst.asp?strClass=B&Empower=Y&chkPreview="+ strPreview +"&RootCD=1&BoardCD=15&BbsName=공지사항&TotalPath=회사게시판 > 공지사항") ) ;
+
+						aux1 = insFld(foldersTree, gFld("자료실", "BbsLst.asp?strClass=B&Empower=Y&chkPreview="+ strPreview +"&RootCD=1&BoardCD=17&BbsName=자료실&TotalPath=회사게시판 > 자료실") );
+
+					aux2 = insFld(aux1, gLnk("0", "익스체인지2000프로그", "BbsLst.asp?strClass=B&Empower=Y&chkPreview="+ strPreview +"&RootCD=1&BoardCD=18&BbsName=익스체인지2000프로그&TotalPath=회사게시판 > 자료실 > 익스체인지2000프로그") );
+
+					aux2 = insFld(aux1, gLnk("0", "ActiveDirectory", "BbsLst.asp?strClass=B&Empower=Y&chkPreview="+ strPreview +"&RootCD=1&BoardCD=19&BbsName=ActiveDirectory&TotalPath=회사게시판 > 자료실 > ActiveDirectory") );
+
+					aux2 = insFld(aux1, gLnk("0", "사내전산관련", "BbsLst.asp?strClass=B&Empower=Y&chkPreview="+ strPreview +"&RootCD=1&BoardCD=20&BbsName=사내전산관련&TotalPath=회사게시판 > 자료실 > 사내전산관련") );
+
+					aux2 = insFld(aux1, gLnk("0", "마케팅", "BbsLst.asp?strClass=B&Empower=Y&chkPreview="+ strPreview +"&RootCD=1&BoardCD=43&BbsName=마케팅&TotalPath=회사게시판 > 자료실 > 마케팅") );
+
+					aux2 = insFld(aux1, gLnk("0", "웹플러스KB", "BbsLst.asp?strClass=B&Empower=Y&chkPreview="+ strPreview +"&RootCD=1&BoardCD=21&BbsName=웹플러스KB&TotalPath=회사게시판 > 자료실 > 웹플러스KB") );
+
+					aux2 = insFld(aux1, gFld("Plus3.0관련", "BbsLst.asp?strClass=B&Empower=Y&chkPreview="+ strPreview +"&RootCD=1&BoardCD=22&BbsName=Plus3.0관련&TotalPath=회사게시판 > 자료실 > Plus3.0관련") );
+
+					aux3 = insFld(aux2, gLnk("0", "PLUS MIS", "BbsLst.asp?strClass=B&Empower=Y&chkPreview="+ strPreview +"&RootCD=1&BoardCD=46&BbsName=PLUS MIS&TotalPath=회사게시판 > 자료실 > Plus3.0관련 > PLUS MIS") );
+
+					aux2 = insFld(aux1, gLnk("0", "사내세미나", "BbsLst.asp?strClass=B&Empower=Y&chkPreview="+ strPreview +"&RootCD=1&BoardCD=23&BbsName=사내세미나&TotalPath=회사게시판 > 자료실 > 사내세미나") );
+
+						aux1 = insFld(foldersTree, gLnk("0","교육&세미나&전시회", "BbsLst.asp?strClass=B&Empower=Y&chkPreview="+ strPreview +"&RootCD=1&BoardCD=14&BbsName=교육%26세미나%26전시회&TotalPath=회사게시판 > 교육%26세미나%26전시회") ) ;
+
+						aux1 = insFld(foldersTree, gLnk("0","그룹웨어Q&A", "BbsLst.asp?strClass=B&Empower=Y&chkPreview="+ strPreview +"&RootCD=1&BoardCD=16&BbsName=그룹웨어Q%26A&TotalPath=회사게시판 > 그룹웨어Q%26A") ) ;
+
+						aux1 = insFld(foldersTree, gFld("사내동호회", "BbsLst.asp?strClass=B&Empower=Y&chkPreview="+ strPreview +"&RootCD=1&BoardCD=25&BbsName=사내동호회&TotalPath=회사게시판 > 사내동호회") );
+
+					aux2 = insFld(aux1, gFld("INSIDE 축구동호회", "BbsLst.asp?strClass=B&Empower=Y&chkPreview="+ strPreview +"&RootCD=1&BoardCD=28&BbsName=INSIDE 축구동호회&TotalPath=회사게시판 > 사내동호회 > INSIDE 축구동호회") );
+
+					aux3 = insFld(aux2, gLnk("0", "사진관", "BbsLst.asp?strClass=B&Empower=Y&chkPreview="+ strPreview +"&RootCD=1&BoardCD=29&BbsName=사진관&TotalPath=회사게시판 > 사내동호회 > INSIDE 축구동호회 > 사진관") );
+
+					aux2 = insFld(aux1, gLnk("0", "RUSH 게임동호회", "BbsLst.asp?strClass=B&Empower=Y&chkPreview="+ strPreview +"&RootCD=1&BoardCD=51&BbsName=RUSH 게임동호회&TotalPath=회사게시판 > 사내동호회 > RUSH 게임동호회") );
+
+					aux2 = insFld(aux1, gLnk("0", "영화사랑", "BbsLst.asp?strClass=B&Empower=Y&chkPreview="+ strPreview +"&RootCD=1&BoardCD=52&BbsName=영화사랑&TotalPath=회사게시판 > 사내동호회 > 영화사랑") );
+
+						aux1 = insFld(foldersTree, gLnk("0","플러스웨어수정사항", "BbsLst.asp?strClass=B&Empower=Y&chkPreview="+ strPreview +"&RootCD=1&BoardCD=24&BbsName=플러스웨어수정사항&TotalPath=회사게시판 > 플러스웨어수정사항") ) ;
+
+				initializeDocument(0);
+		</SCRIPT>
+-- 내용 종료 -->
+       </TD></TR></TBODY></TABLE></FORM></BODY></HTML>

@@ -1,0 +1,16 @@
+생산관리 제품생산 진행상태 조회
+
+java : com.anbtech.mm.business.productProcessBO.java
+       사용법 :
+           1. 초기값 구하기 : public void getLinkNo(String mps_code,String factory_code)
+	   2. 생산계획(MPS) : public String getMpsStatus()
+           3. 부품소요(MRS) : public String getMrpStatus()
+           4. 제조오더(MFG) : public String getMfgStatus()
+           5. 구매발주      : public String getPurchaseStatus()
+           6. 제조생산      : public String getProductStatus()
+           7. 품질검사      : public String getQcStatus()
+
+servlet : mpsInfoServlet.java
+          mode : process_view
+
+jsp : /mm/mps/ProcessStatus.jsp

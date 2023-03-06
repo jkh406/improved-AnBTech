@@ -1,0 +1,35 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<SCRIPT LANGUAGE="Javascript">
+ var javawsInstalled = 0; 
+	 isIE = "false"; 
+
+ if (navigator.mimeTypes && navigator.mimeTypes.length) { 
+			x = navigator.mimeTypes['application/x-java-jnlp-file']; 
+			if (x) javawsInstalled = 1; 
+ } else { 
+			isIE = "true"; 
+ } 
+ 
+
+ function insertLink(url, name) { 
+	  if (javawsInstalled) { 
+				 document.write("<a href=" + url + ">"  + name + "</a>"); 
+	   } else { 
+				 document.write("Need to install Java Web Start"); 
+	   } 
+ } 
+</SCRIPT> 
+
+
+<applet codebase="../applet" 
+		code="WelcomeApplet.class" 
+		ARCHIVE="WelcomeApplet.jar"
+		width=640 
+		height=480>
+		<param name="font" value="arial">
+		<param name="fontsize" value="13">
+</applet>
+<body>
+</body>
+</HTML>

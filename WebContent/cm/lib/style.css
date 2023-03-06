@@ -1,0 +1,45 @@
+INPUT {
+	FONT-SIZE: 9pt; COLOR: black
+}
+SELECT {
+	FONT-SIZE: 9pt; COLOR: black
+}
+TEXTAREA {
+	FONT-SIZE: 9pt; COLOR: black
+}
+BODY {
+	FONT-SIZE: 9pt; LINE-HEIGHT: 150%
+}
+TD {
+	FONT-WEIGHT: normal; FONT-SIZE: 9pt; LINE-HEIGHT: 150%; FONT-STYLE: normal; FONT-VARIANT: normal
+}
+A:link {
+	FONT-WEIGHT: normal; FONT-SIZE: 9pt; COLOR: #000000; FONT-STYLE: normal; FONT-VARIANT: normal; TEXT-DECORATION: none
+}
+A:visited {
+	FONT-WEIGHT: normal; FONT-SIZE: 9pt; COLOR: #000000; FONT-STYLE: normal; FONT-VARIANT: normal; TEXT-DECORATION: none
+}
+A:active {
+	FONT-WEIGHT: normal; FONT-SIZE: 9pt; COLOR: #000000; FONT-STYLE: normal; FONT-VARIANT: normal; TEXT-DECORATION: none
+}
+A:hover {
+	FONT-WEIGHT: normal; FONT-SIZE: 9pt; COLOR: #0000ff; FONT-STYLE: normal; FONT-VARIANT: normal; TEXT-DECORATION: none
+}
+BODY {
+	SCROLLBAR-FACE-COLOR: #e2e2e2; SCROLLBAR-SHADOW-COLOR: #9b9b9b; SCROLLBAR-3DLIGHT-COLOR: #9b9b9b; SCROLLBAR-ARROW-COLOR: #ffffff; SCROLLBAR-DARKSHADOW-COLOR: #ffffff; SCROLLBAR-BASE-COLOR: #e2e2e2
+}
+.text {
+	BORDER-RIGHT: #000000 1px solid; BORDER-TOP: #000000 1px solid; FONT: 9pt ±¼¸²; BORDER-LEFT: #000000 1px solid; COLOR: #000000; BORDER-BOTTOM: #000000 1px solid; BACKGROUND-COLOR: #ffffff
+}
+.text1 {
+	BORDER-RIGHT: #000000 1px solid; BORDER-TOP: #000000 0px solid; FONT: 9pt ±¼¸²; BORDER-LEFT: #000000 1px solid; COLOR: #000000; BORDER-BOTTOM: #000000 0px solid; BACKGROUND-COLOR: #ffffff
+}
+.imoborder {
+	BORDER-RIGHT: #ff9900 1px solid; BORDER-TOP: #ff6600 0px solid; BORDER-LEFT: 0px solid; BORDER-BOTTOM: #ff6600 0px solid
+}
+.blackborder {
+	BORDER-RIGHT: #ffffff 1px solid; BORDER-TOP: #ffffff 1px solid; BORDER-LEFT: #ffffff 1px solid; BORDER-BOTTOM: #ffffff 1px solid
+}
+.imgborder {
+	BORDER-RIGHT: black 1px solid; BORDER-TOP: #000000 1px solid; BORDER-LEFT: black 1px solid; BORDER-BOTTOM: black 1px solid
+}

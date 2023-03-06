@@ -1,0 +1,64 @@
+UNKNOWN {
+	COLOR: #5159ff; TEXT-DECORATION: none
+}
+A:link {
+	COLOR: #565656; TEXT-DECORATION: none; COLOR: #4991DD;
+}
+A:active {
+	COLOR: #565656; TEXT-DECORATION: none;
+}
+A:visited {
+	COLOR: #565656; TEXT-DECORATION: none; COLOR: #4991DD;
+}
+A:hover {
+	COLOR: #4991DD; TEXT-DECORATION: underline;
+}
+TD {
+	FONT: 8pt/16px Verdana,굴림,Gulim
+}
+BODY {
+	scrollbar-face-color:#FFFFFF;
+	scrollbar-highlight-color: #aaaaaa;
+	scrollbar-3dlight-color: #FFFFFF;
+	scrollbar-shadow-color: #aaaaaa;
+	scrollbar-darkshadow-color: #FFFFFF;
+	scrollbar-track-color: #FFFFFF;
+	scrollbar-arrow-color: #aaaaaa;
+}
+/* 목록페이지 제목 */
+.title { 
+	COLOR:#0B2C55;FONT WEIGHT : bolder;font-size: 9pt;padding-left:5px;padding-right:10px;
+}
+/* 목록 제목 */
+.list_title {
+	COLOR:#4D91DC;FONT WEIGHT : bolder;font-size: 9pt;background-color:#EFF0F5 ;
+}
+/*목록 내용*/
+.list_bg   {
+	COLOR:#565656;font-size: 9pt;
+}
+/* 항목 제목 */
+.bg_03   {
+	COLOR:#4D91DC;FONT WEIGHT : bolder;font-size: 9pt;padding-left:10px;
+}
+/* 항목 내용 */
+.bg_04   {
+	COLOR:#565656;font-size: 9pt;padding-left:10px;background-color:#FFFFFF;
+}
+
+/* 인쇄폼 보기에서 페이지 타이틀 */
+.title2   {
+	COLOR:#565656;font-size: 12pt;FONT WEIGHT : bolder;
+}
+/* 인쇄폼 보기에서 항목 제목 */
+.bg_05   {
+	COLOR:#4D91DC;FONT WEIGHT : bolder;font-size: 9pt;background-color:#EAF3FD;
+}
+/* 인쇄폼 보기에서 항목 내용 */
+.bg_06   {
+	COLOR:#565656;font-size: 9pt;background-color:#FFFFFF;padding-left:5px;
+}
+/* 인쇄폼 보기에서 항목 제목 */
+.bg_07   {
+	COLOR:#565656;font-size: 9pt;background-color:#F5F5F5;
+}

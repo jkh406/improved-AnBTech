@@ -1,0 +1,24 @@
+com.anbtech.psm.business.psmProcessBO
+
+//과제 진행상태 검사
+public String checkProjectStatus(String psm_code);
+
+	- psm_code : 과제코드
+
+	- 리턴값 1:미진행, 2:진행, 3:재진행, 4:완료, 5:보류, 6:취소
+
+
+
+//해당과제의 잔액구하기
+public double getBalanceMaterial(String psm_code);
+	
+	- psm_code : 과제코드
+
+	- 리턴값 : 재료비 잔액
+
+
+//결재승인시 재료비값 update
+public void saveResultMaterial(String psm_code,double material_price);
+
+	- psm_code : 과제코드
+	- material_price : 해당과제의 구매재료비 총액

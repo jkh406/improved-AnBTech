@@ -1,0 +1,51 @@
+UNKNOWN {
+	COLOR: #5159ff; TEXT-DECORATION: none
+}
+A:link {
+	COLOR: #565656; TEXT-DECORATION: none;
+}
+A:active {
+	COLOR: #565656; TEXT-DECORATION: none;
+}
+A:visited {
+	COLOR: #565656; TEXT-DECORATION: none;
+}
+A:hover {
+	COLOR: #4991DD; TEXT-DECORATION: underline;
+}
+TD {
+	FONT: 8pt/16px Verdana,굴림,Gulim
+}
+BODY {
+	FONT: 9pt Verdana,굴림,Gulim
+}
+/* 페이지 제목 */
+.title {
+	COLOR:#0B2C55;FONT WEIGHT : bolder;font-size: 9pt;padding-left:5px;
+}
+/* 목록 제목 */
+.list_title {
+	COLOR:#4D91DC;FONT WEIGHT : bolder;font-size: 9pt;background-color:#EFF0F5 ;
+}
+/*목록 내용*/
+.list_bg   {
+	COLOR:#565656;font-size: 9pt;
+}
+/* 항목 제목 */
+.bg_01   {
+	COLOR:#4D91DC;FONT WEIGHT : bolder;font-size: 9pt;padding-left:10px;
+}
+.bg_03   {
+	COLOR:#4D91DC;FONT WEIGHT : bolder;font-size: 9pt;padding-left:10px;
+}
+/* 항목 내용 */
+.bg_02   {
+	COLOR:#565656;font-size: 9pt;padding-left:10px;background-color:#F5F5F5;
+}
+.bg_04   {
+	COLOR:#565656;font-size: 9pt;padding-left:10px;background-color:#F5F5F5;
+}
+/* 입력 양식 */
+.bg_05   {
+	BORDER:1 solid #337099; COLOR:#565656;font-size: 10pt;background-color:#F5FFF2;
+}

@@ -1,0 +1,5 @@
+.;C:\tomcat4\webapps\ROOT\WEB-INF\classes;C:\tomcat4\common\lib\servlet.jar;C:\jdk1.3\jre\lib\ext\mm.mysql-2.0.4-bin.jar;C:\tomcat4\common\lib\msutil.jar;C:\tomcat4\common\lib\mssqlserver.jar;C:\tomcat4\common\lib\msbase.jar;C:\tomcat4\webapps\anb\WEB-INF\classes
+
+
+
+%SystemRoot%\system32;%SystemRoot%;%SystemRoot%\System32\Wbem;C:\jdk1.3\bin;C:\jdk1.3\lib;C:\mysql\bin;D:\Program Files\Microsoft SQL Server\80\Tools\BINN

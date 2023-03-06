@@ -1,0 +1,108 @@
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[geuntae_account]') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
+drop table [dbo].[geuntae_account]
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[geuntae_count]') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
+drop table [dbo].[geuntae_count]
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[geuntae_hd_max]') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
+drop table [dbo].[geuntae_hd_max]
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[geuntae_master]') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
+drop table [dbo].[geuntae_master]
+GO
+
+CREATE TABLE [dbo].[geuntae_account] (
+	[gt_id] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[gt_cid] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[at_var] [varchar] (10) COLLATE Korean_Wansung_CI_AS NULL ,
+	[at_name] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[gt_cost] [varchar] (20) COLLATE Korean_Wansung_CI_AS NULL ,
+	[cost_cont] [varchar] (100) COLLATE Korean_Wansung_CI_AS NULL 
+) ON [PRIMARY]
+GO
+
+CREATE TABLE [dbo].[geuntae_count] (
+	[gt_id] [varchar] (30) COLLATE Korean_Wansung_CI_AS NOT NULL ,
+	[ys_kind] [varchar] (20) COLLATE Korean_Wansung_CI_AS NULL ,
+	[hd_var] [varchar] (50) COLLATE Korean_Wansung_CI_AS NULL ,
+	[user_id] [varchar] (10) COLLATE Korean_Wansung_CI_AS NULL ,
+	[user_name] [varchar] (20) COLLATE Korean_Wansung_CI_AS NULL ,
+	[user_code] [varchar] (10) COLLATE Korean_Wansung_CI_AS NULL ,
+	[user_rank] [varchar] (15) COLLATE Korean_Wansung_CI_AS NULL ,
+	[ac_code] [varchar] (10) COLLATE Korean_Wansung_CI_AS NULL ,
+	[ac_name] [varchar] (20) COLLATE Korean_Wansung_CI_AS NULL ,
+	[thisyear] [varchar] (4) COLLATE Korean_Wansung_CI_AS NULL ,
+	[jan1] [decimal](5, 1) NULL ,
+	[feb2] [decimal](5, 1) NULL ,
+	[mar3] [decimal](5, 1) NULL ,
+	[apr4] [decimal](5, 1) NULL ,
+	[may5] [decimal](5, 1) NULL ,
+	[jun6] [decimal](5, 1) NULL ,
+	[jul7] [decimal](5, 1) NULL ,
+	[aug8] [decimal](5, 1) NULL ,
+	[sep9] [decimal](5, 1) NULL ,
+	[oct10] [decimal](5, 1) NULL ,
+	[nov11] [decimal](5, 1) NULL ,
+	[dec12] [decimal](5, 1) NULL 
+) ON [PRIMARY]
+GO
+
+CREATE TABLE [dbo].[geuntae_hd_max] (
+	[no] [tinyint] IDENTITY (1, 1) NOT NULL ,
+	[id] [varchar] (20) COLLATE Korean_Wansung_CI_AS NOT NULL ,
+	[byyear] [varchar] (4) COLLATE Korean_Wansung_CI_AS NOT NULL ,
+	[hdmax] [decimal](5, 1) NOT NULL ,
+	[kind] [varchar] (10) COLLATE Korean_Wansung_CI_AS NOT NULL 
+) ON [PRIMARY]
+GO
+
+CREATE TABLE [dbo].[geuntae_master] (
+	[gt_id] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[gt_cid] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[doc_id] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[ys_kind] [varchar] (20) COLLATE Korean_Wansung_CI_AS NULL ,
+	[user_id] [varchar] (10) COLLATE Korean_Wansung_CI_AS NULL ,
+	[user_name] [varchar] (20) COLLATE Korean_Wansung_CI_AS NULL ,
+	[user_code] [varchar] (10) COLLATE Korean_Wansung_CI_AS NULL ,
+	[user_rank] [varchar] (15) COLLATE Korean_Wansung_CI_AS NULL ,
+	[ac_id] [int] NULL ,
+	[ac_code] [varchar] (11) COLLATE Korean_Wansung_CI_AS NULL ,
+	[ac_name] [varchar] (20) COLLATE Korean_Wansung_CI_AS NULL ,
+	[fellow_names] [varchar] (500) COLLATE Korean_Wansung_CI_AS NULL ,
+	[prj_code] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[in_date] [varchar] (20) COLLATE Korean_Wansung_CI_AS NULL ,
+	[u_year] [varchar] (4) COLLATE Korean_Wansung_CI_AS NULL ,
+	[u_month] [varchar] (2) COLLATE Korean_Wansung_CI_AS NULL ,
+	[u_date] [varchar] (2) COLLATE Korean_Wansung_CI_AS NULL ,
+	[tu_year] [varchar] (4) COLLATE Korean_Wansung_CI_AS NULL ,
+	[tu_month] [varchar] (2) COLLATE Korean_Wansung_CI_AS NULL ,
+	[tu_date] [varchar] (2) COLLATE Korean_Wansung_CI_AS NULL ,
+	[gt_dest] [varchar] (50) COLLATE Korean_Wansung_CI_AS NULL ,
+	[country_class] [varchar] (4) COLLATE Korean_Wansung_CI_AS NULL ,
+	[gt_country] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[traffic_way] [varchar] (10) COLLATE Korean_Wansung_CI_AS NULL ,
+	[gt_purpose] [varchar] (100) COLLATE Korean_Wansung_CI_AS NULL ,
+	[at_var] [varchar] (50) COLLATE Korean_Wansung_CI_AS NULL ,
+	[at_name] [varchar] (20) COLLATE Korean_Wansung_CI_AS NULL ,
+	[gt_cost] [int] NULL ,
+	[cost_cont] [varchar] (100) COLLATE Korean_Wansung_CI_AS NULL ,
+	[receiver_id] [varchar] (10) COLLATE Korean_Wansung_CI_AS NULL ,
+	[receiver_name] [varchar] (20) COLLATE Korean_Wansung_CI_AS NULL ,
+	[gt_time_per] [varchar] (20) COLLATE Korean_Wansung_CI_AS NULL ,
+	[hd_var] [varchar] (50) COLLATE Korean_Wansung_CI_AS NULL ,
+	[hd_name] [varchar] (50) COLLATE Korean_Wansung_CI_AS NULL ,
+	[proxy] [varchar] (50) COLLATE Korean_Wansung_CI_AS NULL ,
+	[em_tel] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[del_date] [int] NULL ,
+	[fpath] [varchar] (100) COLLATE Korean_Wansung_CI_AS NULL ,
+	[fname] [varchar] (50) COLLATE Korean_Wansung_CI_AS NULL ,
+	[ftype] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[fsize] [varchar] (50) COLLATE Korean_Wansung_CI_AS NULL ,
+	[flag] [varchar] (2) COLLATE Korean_Wansung_CI_AS NULL ,
+	[flag2] [varchar] (2) COLLATE Korean_Wansung_CI_AS NULL 
+) ON [PRIMARY]
+GO
+

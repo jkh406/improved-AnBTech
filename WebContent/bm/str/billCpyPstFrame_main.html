@@ -1,0 +1,20 @@
+<HTML>
+<HEAD>
+<TITLE> BOM 복사/붙이기 Frame</TITLE>
+</HEAD>
+
+<FRAMESET framespacing="3" border="1" bordercolor=black cols="*" frameborder="0">
+	<FRAMESET rows="150,*">
+		<FRAMESET cols="50%,50%">
+			<FRAME name="copy" target="copy" src="../../servlet/BomBillModifyServlet?mode=cpy_fgsearch&sWord=FG CODE" scrolling="no" noresize> 
+			<FRAME name="paste" target="paste" src="../../servlet/BomBillModifyServlet?mode=pst_fgsearch&sWord=FG CODE" scrolling="no" noresize>
+		</FRAMESET>
+		<FRAME name="list" target="list" src="../../servlet/BomBillModifyServlet?mode=cpy_list" scrolling="no" noresize> 
+	</FRAMESET>
+  <NOFRAMES>
+<BODY>
+
+</BODY>
+</NOFRAMES>
+</FRAMESET>
+</HTML>

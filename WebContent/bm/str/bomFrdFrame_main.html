@@ -1,0 +1,18 @@
+<HTML>
+<HEAD>
+<TITLE> 정전개 TREE 구조체계 Frame</TITLE>
+</HEAD>
+
+<FRAMESET framespacing="3" border="1" bordercolor=black cols="*" frameborder="0">
+	<FRAMESET rows="25,*">
+	<FRAME name="search" target="search" src="../../servlet/BomShowServlet?mode=frd_fgsearch&sWord=FG코드로찾기" scrolling="no" noresize>
+	<FRAMESET cols="250,*" frameborder="0">
+		<FRAME name="tree" target="tree" src="../../servlet/BomShowServlet?mode=frd_tree" scrolling="no" noresize>
+		<FRAME name="list" target="list" src="../../servlet/BomShowServlet?mode=frd_text" scrolling="no">
+	</FRAMESET>
+	</FRAMESET>
+<NOFRAMES>
+<BODY></BODY>
+</NOFRAMES>
+</FRAMESET>
+</HTML>

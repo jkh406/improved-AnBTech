@@ -1,0 +1,259 @@
+<HTML>
+<HEAD>
+<title>WebForm1</title>
+
+
+<script language="vbscript"> 
+  '+++++++++++++++++++++++++++++변수 선언++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  dim gsRcv                                                                'pdt1100의 입력변수 
+  dim gsTemp                                                              '통신포트로 받은 데이터를 임시 기억 
+  dim gsImsi 
+  dim PosCR                                                                'CR값을 찾은 문자열 위치 
+  dim gbEnd 
+  dim i
+  '+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+  '+++++++++++++++++++++++++++++Port Open+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  Public Sub PortOpen()
+	  msgbox "0"
+	  If Frm_Main.M.PortOpen = True Then							'Frm_Main:Form명   , M: Object명
+		   msgbox "11"
+		   Frm_Main.M.PortOpen = False 
+	  End If 
+	  msgbox "1"
+	  Frm_Main.M.CommPort = 1                                        'com1 사용시....
+
+	  If Frm_Main.M.PortOpen = False Then          
+			Frm_Main.M.PortOpen = True            
+			msgbox "2"
+	  End If 
+  END Sub
+  '+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  '+++++++++++++++++++++++++ENQ전송++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  Public Sub Trns_Enq()
+  
+	  If Frm_Main.M.PortOpen = True Then							'Frm_Main:Form명   , M: Object명
+			Frm_Main.M.Output = Chr(5)								'ENQ 전송 
+	  End If 
+
+  END Sub
+  '+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  '++++++++++++++++++++++++DATA 전송+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  Public Sub Trns_Data()
+  
+		If Frm_Main.M.PortOpen = True Then                           'Frm_Main:Form명   , M: Object명
+			'Frm_Main.M.Output = "12345" + chr(13)					 'DATA + CR 전송 
+			'Frm_Main.M.Output = Frm_Main.Txt_data.value + chr(13)
+			Frm_Main.M.Output = Frm_Main.Txtout_data.value & vbcrlf
+	   End If													 
+
+  END Sub
+  '+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  '+++++++++++++++++++++++++STX전송++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  Public Sub Trns_Stx()
+  
+	  If Frm_Main.M.PortOpen = True Then                           'Frm_Main:Form명   , M: Object명
+			Frm_Main.M.Output = Chr(2)                          'STX  전송 
+	  End If 
+
+  END Sub
+  '++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  '+++++++++++++++++++++++++ACK전송+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  Public Sub Trns_Ack()
+  
+	  If Frm_Main.M.PortOpen = True Then                           'Frm_Main:Form명   , M: Object명
+			Frm_Main.M.Output = Chr(6)                          'ACK  전송 
+	  End If 
+
+  END Sub
+  '++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  '+++++++++++++++++++++++++NAK전송++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  Public Sub Trns_Nak()
+  
+	  If Frm_Main.M.PortOpen = True Then                           'Frm_Main:Form명   , M: Object명
+			Frm_Main.M.Output = Chr(15)                          'NAK  전송 
+	  End If 
+
+  END Sub
+  '+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  '+++++++++++++++++++++++++ETX전송++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  Public Sub Trns_Etx()
+  
+	  If Frm_Main.M.PortOpen = True Then                           'Frm_Main:Form명   , M: Object명
+			Frm_Main.M.Output = Chr(3)                          'ETX  전송 
+	  End If 
+
+  END Sub
+  '++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  '+++++++++++++++++++++++++++++Port Close+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  Public Sub PortClose()
+  
+	  If Frm_Main.M.PortOpen = True Then                        'Frm_Main:Form명   , M: Object명
+			Frm_Main.M.PortOpen = False 
+	  End If 
+
+  END Sub
+  '++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  '++++++++++++++++++++++++++++++++LPT1 프린트++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  Public Sub LPT_Print()                            'LPT Port로 발행
+   
+	   dim zpl_text            'ZPL 커멘드 저장 변수
+	   Set fs = CreateObject("Scripting.FileSystemObject")
+	   Set LPTport = fs.CreateTextFile("LPT1:", True)
+	   zpl_text="^XA" & "^FO100,100" &  "^BCN,100,Y,N,N^FD" & "123456" & "^FS^XZ"    '예) 바코드128코드 123456출력
+	   
+	   LPTport.WriteLine(zpl_text)       '출력
+	   LPTport.Close
+
+   
+  End Sub
+  
+  '+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  '+++++++++++++++++++++++++++++++++파일저장+++++++++++++++++++++++++++++++++++++++++++++++++
+  Public Sub TXT_Save()                            'TEXT 저장
+   
+	   Set fs = CreateObject("Scripting.FileSystemObject")
+	   Set TXTsave = fs.CreateTextFile("C:test3.txt", True)          '경로및 파일명
+	   
+	   TXTsave.WriteLine("1234567890")                               '1234567890저장
+	   
+	   TXTsave.Close
+	   'msgbox "저장 완료"
+   
+  End Sub
+  Public Sub Cal_Data()
+		msgbox Frm_Main.calFormDate.calMonth
+  End Sub
+  '++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  '+++++++++++++++++++++++++++++++++데이터 수신++++++++++++++++++++++++++++++++++++++++++++++++
+  public Sub M_OnComm()                                    '함수명 고정 ,  시리얼로 들어온 데이터 체크
+  
+	  if Frm_Main.M.CommEvent=2 then       '데이터 수신 , Frm_Main:Form명   , M: Object명      
+	   
+		   gsRcv = gsRcv + Frm_Main.M.Input
+		   if Len(gsRcv) > 0 Then 
+			
+				PosCR = InStr(1, gsRcv, Chr(13))    'CR값 체크
+				
+				if InStr(1, gsRcv, Chr(5))>0 then
+					msgbox "111111"
+				end if    
+
+				If PosCR > 0 Then 
+					 '=====================================이부분에 데이터 처리 구문 사용==================================
+					 gsTemp = Mid(gsRcv, 1, PosCR - 1) 
+					 gsImsi = gsRcv 
+					 
+					 'Frm_Main.Txt_data.value = gsTemp
+					 Frm_Main.Txtin_data.value = Frm_Main.Txtin_data.value & gsTemp & vbcrlf 
+					 gsRcv = Mid(gsRcv, PosCR + 1, Len(gsRcv))   ' clear 
+					 '====================================================================================================
+				End If 
+
+		   End If 
+	  End if 
+
+  End Sub 
+  '+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    
+</script>
+</HEAD>
+<body>
+
+<!--
+<form id="Frm_Main" method="post" runat="server">
+
+	<OBJECT classid="clsid:5220cb21-c88d-11cf-b347-00aa00a28331">
+			<PARAM NAME="LPKPath" VALUE="mscomm32.lpk">
+	</OBJECT>
+
+	<OBJECT id="M" name="M"
+			codeBase="http://activex.microsoft.com/controls/vb6/MSCOMM32.CAB#version=6.0.81.69"  classid="clsid:648A5600-2C6E-101B-82B6-000000000014">
+		 
+		 <PARAM NAME="_ExtentX" VALUE="1005">
+		 <PARAM NAME="_ExtentY" VALUE="1005">
+		 <PARAM NAME="_Version" VALUE="393216">
+		 <PARAM NAME="CommPort" VALUE="1">
+		 <PARAM NAME="DTREnable" VALUE="-1">
+		 <PARAM NAME="Handshaking" VALUE="0">
+		 <PARAM NAME="InBufferSize" VALUE="1024">
+		 <PARAM NAME="InputLen" VALUE="0">
+		 <PARAM NAME="NullDiscard" VALUE="0">
+		 <PARAM NAME="OutBufferSize" VALUE="512">
+		 <PARAM NAME="ParityReplace" VALUE="63">
+		 <PARAM NAME="RThreshold" VALUE="1">
+		 <PARAM NAME="RTSEnable" VALUE="0">
+		 <PARAM NAME="BaudRate" VALUE="9600">
+		 <PARAM NAME="ParitySetting" VALUE="0">
+		 <PARAM NAME="DataBits" VALUE="8">
+		 <PARAM NAME="StopBits" VALUE="0">
+		 <PARAM NAME="SThreshold" VALUE="1">
+		 <PARAM NAME="EOFEnable" VALUE="0">
+		 <PARAM NAME="InputMode" VALUE="0">
+	</OBJECT>
+	<INPUT id="Port_Open" style="Z-INDEX: 102; LEFT: 60px; WIDTH: 93px; POSITION: absolute; TOP: 14px; HEIGHT: 50px" onclick="PortOpen()" type="button" value="Port Open"> 
+	<INPUT id="Port_Close" style="Z-INDEX: 104; LEFT: 167px; WIDTH: 105px; POSITION: absolute; TOP: 15px; HEIGHT: 50px" onclick="PortClose()" type="button" value="Port Close"> 
+	<INPUT id="Enq" style="Z-INDEX: 105; LEFT: 60px; WIDTH: 92px; POSITION: absolute; TOP: 80px; HEIGHT: 49px"
+	onclick="Trns_Enq()" type="button" value="ENQ"> 
+	<INPUT id="Etx" style="Z-INDEX: 106; LEFT: 169px; WIDTH: 104px; POSITION: absolute; TOP: 80px; HEIGHT: 48px" onclick="Trns_Etx()" type="button" value="ETX"> 
+	<INPUT id="Stx" style="Z-INDEX: 107; LEFT: 290px; WIDTH: 99px; POSITION: absolute; TOP: 81px; HEIGHT: 50px" onclick="Trns_Stx()" type="button" value="STX"> 
+	<INPUT id="Ack" style="Z-INDEX: 108; LEFT: 409px; WIDTH: 97px; POSITION: absolute; TOP: 80px; HEIGHT: 48px" onclick="Trns_Ack()" type="button" value="ACK"> 
+	<INPUT id="Nak" style="Z-INDEX: 109; LEFT: 527px; WIDTH: 93px; POSITION: absolute; TOP: 81px; HEIGHT: 48px" onclick="Trns_Nak()" type="button" value="NAK"> 
+	<INPUT id="Txt_data" style="Z-INDEX: 110; LEFT: 62px; WIDTH: 246px; POSITION: absolute; TOP: 140px; HEIGHT: 33px" type="text" size="35" runat="server"> 
+	<INPUT id="DataOut" style="Z-INDEX: 111; LEFT: 318px; WIDTH: 96px; POSITION: absolute; TOP: 139px; HEIGHT: 34px" onclick="Trns_Data()" type="button" value="DataOutPut">
+	<br><br><br><br><br><br><br><br><br><br><br><br>
+	
+	<textarea name="content" rows="14" cols="68" id="Txtin_data" ></textarea>
+	<textarea name="content1" rows="14" cols="68" id="Txtout_data" ></textarea>
+ 
+</form>
+-->
+
+<P> Object Test <P>
+<OBJECT 
+		data="Barcode_applet.html"
+		WIDTH="600" HEIGHT="100"> 
+</OBJECT>
+
+<p>달력<p>
+<object classid="clsid:8E27C92B-1264-101C-8A2F-040224009C02" ID="calFormDate" width="372" height="200">
+</object> 
+
+<P>재생기<P>
+<object codebase="http://www.211.174.59.74/mplay/mpie4min.cab#Version=6,4,0,7"
+		height="176" 
+		width="240" 
+		type="audio/x-pn-realaudio-plugin"
+	    classid="clsid:22D6F312-B0F6-11D0-94AB-0080C74C7E95">
+
+</object>
+
+
+<P>?<P>
+<OBJECT classid="clsid:CAFEEFAC-0014-0001-0000-ABCDEFFEDCBA"
+    width="200" height="200" align="baseline" 
+    codebase="http://java.sun.com/products/plugin/autodl/jinstall-1_4-windows-i586.cab#Version=1,4,1,mn">
+    <PARAM name="code" value="XYZApp.class">
+    <PARAM name="codebase" value="html/">
+    <PARAM name="type" value="application/x-java-applet;jpi-version=1.4.1">
+    <PARAM name="model" value="models/HyaluronicAcid.xyz">
+    <PARAM name="scriptable" value="true">
+        No Java 2 SDK, Standard Edition v 1.4.1 support for APPLET!!
+</OBJECT>
+
+
+<P>?<P>
+<object classid="clsid:2ED18548-033C-4ADE-A17F-3A1E07396A6B"
+  codebase="http://www.ice.pe.kr/IceCastPlayerX.cab#version=1,0,8,0" 
+  style="width:0;height:0" id=player>
+  <param name="AutoPlay" value="자동재생시작(1/0)">
+  <param name="CastUrl" value="음악방송주소(필수)">
+  <param name="TitleID" value="제목정보표시엘리먼트ID">
+  <param name="Volume" value="초기음량(0~100)">
+  <param name="Copyright" value="http://www.ice.pe.kr">
+</object>
+
+
+</body>
+</HTML>
+
+

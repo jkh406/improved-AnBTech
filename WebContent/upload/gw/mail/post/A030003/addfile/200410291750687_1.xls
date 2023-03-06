@@ -1,0 +1,553 @@
+
+
+
+
+
+
+
+
+<HTML>
+<HEAD><title>리포트</title>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<script language=javascript>
+<!--
+
+-->
+</script>
+<LINK href="../bm/css/style.css" rel=stylesheet>
+</HEAD>
+
+<BODY bgColor='#ffffff' leftMargin='0' topMargin='0' marginheight='0' marginwidth='0'>
+
+<TABLE height="100%" cellSpacing=0 cellPadding=0 width="100%" border=0 valign="top">
+  <TBODY>
+  <TR height=27><!-- 타이틀 및 페이지 정보 -->
+    <TD vAlign=top>
+		<TABLE height=27 cellSpacing=0 cellPadding=0 width="100%">
+		  <TBODY>
+			<TR bgcolor="#BAC2CD">
+			  <TD valign='middle' colspan="7"> BOM 리포트</TD>
+			</TR></TBODY>
+		</TABLE></TD></TR>
+  <TR height=32>
+		<TD vAlign=top>
+			<TABLE height=32 cellSpacing=0 cellPadding=0 width="100%" border='0'>
+			<TBODY>
+				<TR>
+				<td align=left height="25" colspan="7">
+				모델코드 : HDBJ100-WH
+			    FG코드 : F1HD000100</td>
+				</TR></TBODY></TABLE></TD></TR>
+  <TR><TD height='1' bgcolor='#9DA8BA'></TD></TR>
+<!--리스트-->
+  <TR height=100%>
+    <TD vAlign=top>
+	  <TABLE cellSpacing=0 cellPadding=0 width="100%" border=1>
+        <TBODY>
+			<TR vAlign=middle height=25>
+			  <TD noWrap width=30 align=middle >LEVEL</TD>
+			  <TD noWrap width=100 align=middle >모품목코드</TD>
+			  <TD noWrap width=100 align=middle >자품목코드</TD>
+			  <TD noWrap width=350 align=middle >품목규격</TD>
+			  <TD noWrap width=300 align=middle >Location No</TD>
+			  <TD noWrap width=40 align=middle >단위</TD>
+			  <TD noWrap width=40 align=middle >갯수</TD>
+		   </TR>
+			<TR bgColor=#9DA9B9 height=1><TD colspan=7></TD></TR>
+
+		
+			<TR bgColor=#ffffff>
+			  <TD align=left height="24">&nbsp;0</TD>
+			  <TD align=left class='list_bg'>HDBJ100-WH</TD>
+			  <TD align=left class='list_bg'>F1HD000100</TD>
+			  <TD align=left class='list_bg'>F/G,HDBJ100-WH,표준형 BJP-1000</TD>
+			  <TD align=left class='list_bg'></TD>
+			  <TD align=middle class='list_bg'>EA</TD>
+			  <TD align=middle class='list_bg'>1</TD>
+			</TR>
+		
+			<TR bgColor=#ffffff>
+			  <TD align=left height="24">&nbsp;1</TD>
+			  <TD align=left class='list_bg'>F1HD000100</TD>
+			  <TD align=left class='list_bg'>1ES1000100</TD>
+			  <TD align=left class='list_bg'>회로 Assy Set,HDBJ100-WH,표준형 BJP-1000</TD>
+			  <TD align=left class='list_bg'></TD>
+			  <TD align=middle class='list_bg'>EA</TD>
+			  <TD align=middle class='list_bg'>1</TD>
+			</TR>
+		
+			<TR bgColor=#ffffff>
+			  <TD align=left height="24">&nbsp;&nbsp;2</TD>
+			  <TD align=left class='list_bg'>1ES1000100</TD>
+			  <TD align=left class='list_bg'>1EP1000310</TD>
+			  <TD align=left class='list_bg'>PCB Manual Ass`y</TD>
+			  <TD align=left class='list_bg'></TD>
+			  <TD align=middle class='list_bg'>EA</TD>
+			  <TD align=middle class='list_bg'>1</TD>
+			</TR>
+		
+			<TR bgColor=#ffffff>
+			  <TD align=left height="24">&nbsp;&nbsp;&nbsp;3</TD>
+			  <TD align=left class='list_bg'>1EP1000310</TD>
+			  <TD align=left class='list_bg'>1EP1000320</TD>
+			  <TD align=left class='list_bg'>PCB 이형 Auto Ass`y</TD>
+			  <TD align=left class='list_bg'></TD>
+			  <TD align=middle class='list_bg'>EA</TD>
+			  <TD align=middle class='list_bg'>1</TD>
+			</TR>
+		
+			<TR bgColor=#ffffff>
+			  <TD align=left height="24">&nbsp;&nbsp;&nbsp;&nbsp;4</TD>
+			  <TD align=left class='list_bg'>1EP1000320</TD>
+			  <TD align=left class='list_bg'>1EP1000340</TD>
+			  <TD align=left class='list_bg'>PCB Axial Auto Ass`y</TD>
+			  <TD align=left class='list_bg'></TD>
+			  <TD align=middle class='list_bg'>EA</TD>
+			  <TD align=middle class='list_bg'>1</TD>
+			</TR>
+		
+			<TR bgColor=#ffffff>
+			  <TD align=left height="24">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5</TD>
+			  <TD align=left class='list_bg'>1EP1000340</TD>
+			  <TD align=left class='list_bg'>2000200006</TD>
+			  <TD align=left class='list_bg'>CAP CER,0.1[uF],25[V],J,[℃]</TD>
+			  <TD align=left class='list_bg'>C113,C128,C143,C158,C173,C188,C203,C218,<br>C233,C248,C263,C278,C293,C308,C323,C338,<br>R113,R128,R143,R158,R173,R188,R203,R218</TD>
+			  <TD align=middle class='list_bg'>EA</TD>
+			  <TD align=middle class='list_bg'>24</TD>
+			</TR>
+		
+			<TR bgColor=#ffffff>
+			  <TD align=left height="24">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5</TD>
+			  <TD align=left class='list_bg'>1EP1000340</TD>
+			  <TD align=left class='list_bg'>2000200012</TD>
+			  <TD align=left class='list_bg'>CAP CER,820[pF],50[V],J</TD>
+			  <TD align=left class='list_bg'>C103,C118,C133,C148,C163,C178,C193,C208,<br>C223,C238,C253,C268,C283,C298,C313,C328,<br>R103,R118,R133,R148,R163,R178,R193,R208</TD>
+			  <TD align=middle class='list_bg'>EA</TD>
+			  <TD align=middle class='list_bg'>24</TD>
+			</TR>
+		
+			<TR bgColor=#ffffff>
+			  <TD align=left height="24">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5</TD>
+			  <TD align=left class='list_bg'>1EP1000340</TD>
+			  <TD align=left class='list_bg'>2000400007</TD>
+			  <TD align=left class='list_bg'>CAP TAN,10[uF],16[V],K,3216</TD>
+			  <TD align=left class='list_bg'>C109,C124,C139,C154,C169,C184,C199,C214,<br>C229,C244,C259,C274,C289,C304,C319,C334,<br>R109,R124,R139,R154,R169,R184,R199,R214</TD>
+			  <TD align=middle class='list_bg'>EA</TD>
+			  <TD align=middle class='list_bg'>24</TD>
+			</TR>
+		
+			<TR bgColor=#ffffff>
+			  <TD align=left height="24">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5</TD>
+			  <TD align=left class='list_bg'>1EP1000340</TD>
+			  <TD align=left class='list_bg'>2000700001</TD>
+			  <TD align=left class='list_bg'>CAP OTH,10[uF],16[V],K</TD>
+			  <TD align=left class='list_bg'>C106,C121,C136,C151,C166,C181,C196,C211,<br>C226,C241,C256,C271,C286,C301,C316,C331,<br>R106,R121,R136,R151,R166,R181,R196,R211</TD>
+			  <TD align=middle class='list_bg'>EA</TD>
+			  <TD align=middle class='list_bg'>24</TD>
+			</TR>
+		
+			<TR bgColor=#ffffff>
+			  <TD align=left height="24">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5</TD>
+			  <TD align=left class='list_bg'>1EP1000340</TD>
+			  <TD align=left class='list_bg'>2020100003</TD>
+			  <TD align=left class='list_bg'>IND,FI-B3216-102,1[H],K</TD>
+			  <TD align=left class='list_bg'>D101,D106,D111,D116,D121,D126,D131,D136</TD>
+			  <TD align=middle class='list_bg'>EA</TD>
+			  <TD align=middle class='list_bg'>8</TD>
+			</TR>
+		
+			<TR bgColor=#ffffff>
+			  <TD align=left height="24">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5</TD>
+			  <TD align=left class='list_bg'>1EP1000340</TD>
+			  <TD align=left class='list_bg'>2150100002</TD>
+			  <TD align=left class='list_bg'>DIODE BRID,DIO040526-1254</TD>
+			  <TD align=left class='list_bg'>D104,D109,D114,D119,D124,D129,D134,D139</TD>
+			  <TD align=middle class='list_bg'>EA</TD>
+			  <TD align=middle class='list_bg'>8</TD>
+			</TR>
+		
+			<TR bgColor=#ffffff>
+			  <TD align=left height="24">&nbsp;&nbsp;&nbsp;&nbsp;4</TD>
+			  <TD align=left class='list_bg'>1EP1000320</TD>
+			  <TD align=left class='list_bg'>2000100004</TD>
+			  <TD align=left class='list_bg'>CAP AL ELEC,0.1[uF],16[V],J,[℃]</TD>
+			  <TD align=left class='list_bg'>C112,C127,C142,C157,C172,C187,C202,C217,<br>C232,C247,C262,C277,C292,C307,C322,C337,<br>R112,R127,R142,R157,R172,R187,R202,R217</TD>
+			  <TD align=middle class='list_bg'>EA</TD>
+			  <TD align=middle class='list_bg'>24</TD>
+			</TR>
+		
+			<TR bgColor=#ffffff>
+			  <TD align=left height="24">&nbsp;&nbsp;&nbsp;&nbsp;4</TD>
+			  <TD align=left class='list_bg'>1EP1000320</TD>
+			  <TD align=left class='list_bg'>2000200005</TD>
+			  <TD align=left class='list_bg'>CAP CER,1[uF],50[V],J,[℃]</TD>
+			  <TD align=left class='list_bg'>C115,C130,C145,C160,C175,C190,C205,C220,<br>C235,C250,C265,C280,C295,C310,C325,C340,<br>R115,R130,R145,R160,R175,R190,R205,R220</TD>
+			  <TD align=middle class='list_bg'>EA</TD>
+			  <TD align=middle class='list_bg'>24</TD>
+			</TR>
+		
+			<TR bgColor=#ffffff>
+			  <TD align=left height="24">&nbsp;&nbsp;&nbsp;&nbsp;4</TD>
+			  <TD align=left class='list_bg'>1EP1000320</TD>
+			  <TD align=left class='list_bg'>2000200009</TD>
+			  <TD align=left class='list_bg'>CAP CER,0.01[uF],50[V],K</TD>
+			  <TD align=left class='list_bg'>C108,C123,C138,C153,C168,C183,C198,C213,<br>C228,C243,C258,C273,C288,C303,C318,C333,<br>R108,R123,R138,R153,R168,R183,R198,R213</TD>
+			  <TD align=middle class='list_bg'>EA</TD>
+			  <TD align=middle class='list_bg'>24</TD>
+			</TR>
+		
+			<TR bgColor=#ffffff>
+			  <TD align=left height="24">&nbsp;&nbsp;&nbsp;&nbsp;4</TD>
+			  <TD align=left class='list_bg'>1EP1000320</TD>
+			  <TD align=left class='list_bg'>2000200013</TD>
+			  <TD align=left class='list_bg'>CAP CER,10[pF],50[V],J</TD>
+			  <TD align=left class='list_bg'>C102,C117,C132,C147,C162,C177,C192,C207,<br>C222,C237,C252,C267,C282,C297,C312,C327,<br>R102,R117,R132,R147,R162,R177,R192,R207</TD>
+			  <TD align=middle class='list_bg'>EA</TD>
+			  <TD align=middle class='list_bg'>24</TD>
+			</TR>
+		
+			<TR bgColor=#ffffff>
+			  <TD align=left height="24">&nbsp;&nbsp;&nbsp;&nbsp;4</TD>
+			  <TD align=left class='list_bg'>1EP1000320</TD>
+			  <TD align=left class='list_bg'>2000700002</TD>
+			  <TD align=left class='list_bg'>CAP OTH,1000[pF],50[V],K,[℃]</TD>
+			  <TD align=left class='list_bg'>C105,C120,C135,C150,C165,C180,C195,C210,<br>C225,C240,C255,C270,C285,C300,C315,C330,<br>R105,R120,R135,R150,R165,R180,R195,R210</TD>
+			  <TD align=middle class='list_bg'>EA</TD>
+			  <TD align=middle class='list_bg'>24</TD>
+			</TR>
+		
+			<TR bgColor=#ffffff>
+			  <TD align=left height="24">&nbsp;&nbsp;&nbsp;&nbsp;4</TD>
+			  <TD align=left class='list_bg'>1EP1000320</TD>
+			  <TD align=left class='list_bg'>2020100001</TD>
+			  <TD align=left class='list_bg'>IND,HF70ACC575018,1[H],0.02</TD>
+			  <TD align=left class='list_bg'>D103,D108,D113,D118,D123,D128,D133,D138</TD>
+			  <TD align=middle class='list_bg'>EA</TD>
+			  <TD align=middle class='list_bg'>8</TD>
+			</TR>
+		
+			<TR bgColor=#ffffff>
+			  <TD align=left height="24">&nbsp;&nbsp;&nbsp;3</TD>
+			  <TD align=left class='list_bg'>1EP1000310</TD>
+			  <TD align=left class='list_bg'>2000100003</TD>
+			  <TD align=left class='list_bg'>CAP AL ELEC,0.1[uF],25[V],K,[℃]</TD>
+			  <TD align=left class='list_bg'>C114,C129,C144,C159,C174,C189,C204,C219,<br>C234,C249,C264,C279,C294,C309,C324,C339,<br>R114,R129,R144,R159,R174,R189,R204,R219</TD>
+			  <TD align=middle class='list_bg'>EA</TD>
+			  <TD align=middle class='list_bg'>24</TD>
+			</TR>
+		
+			<TR bgColor=#ffffff>
+			  <TD align=left height="24">&nbsp;&nbsp;&nbsp;3</TD>
+			  <TD align=left class='list_bg'>1EP1000310</TD>
+			  <TD align=left class='list_bg'>2000200007</TD>
+			  <TD align=left class='list_bg'>CAP CER,120[pF],50[V],J</TD>
+			  <TD align=left class='list_bg'>C111,C126,C141,C156,C171,C186,C201,C216,<br>C231,C246,C261,C276,C291,C306,C321,C336,<br>R111,R126,R141,R156,R171,R186,R201,R216</TD>
+			  <TD align=middle class='list_bg'>EA</TD>
+			  <TD align=middle class='list_bg'>24</TD>
+			</TR>
+		
+			<TR bgColor=#ffffff>
+			  <TD align=left height="24">&nbsp;&nbsp;&nbsp;3</TD>
+			  <TD align=left class='list_bg'>1EP1000310</TD>
+			  <TD align=left class='list_bg'>2000200008</TD>
+			  <TD align=left class='list_bg'>CAP CER,470[pF],50[V],J</TD>
+			  <TD align=left class='list_bg'>C110,C125,C140,C155,C170,C185,C200,C215,<br>C230,C245,C260,C275,C290,C305,C320,C335,<br>R110,R125,R140,R155,R170,R185,R200,R215</TD>
+			  <TD align=middle class='list_bg'>EA</TD>
+			  <TD align=middle class='list_bg'>24</TD>
+			</TR>
+		
+			<TR bgColor=#ffffff>
+			  <TD align=left height="24">&nbsp;&nbsp;&nbsp;3</TD>
+			  <TD align=left class='list_bg'>1EP1000310</TD>
+			  <TD align=left class='list_bg'>2000200010</TD>
+			  <TD align=left class='list_bg'>CAP CER,0.1[uF],25[V],K</TD>
+			  <TD align=left class='list_bg'>C107,C122,C137,C152,C167,C182,C197,C212,<br>C227,C242,C257,C272,C287,C302,C317,C332,<br>R107,R122,R137,R152,R167,R182,R197,R212</TD>
+			  <TD align=middle class='list_bg'>EA</TD>
+			  <TD align=middle class='list_bg'>24</TD>
+			</TR>
+		
+			<TR bgColor=#ffffff>
+			  <TD align=left height="24">&nbsp;&nbsp;&nbsp;3</TD>
+			  <TD align=left class='list_bg'>1EP1000310</TD>
+			  <TD align=left class='list_bg'>2000200011</TD>
+			  <TD align=left class='list_bg'>CAP CER,33[pF],50[V],J</TD>
+			  <TD align=left class='list_bg'>C104,C119,C134,C149,C164,C179,C194,C209,<br>C224,C239,C254,C269,C284,C299,C314,C329,<br>R104,R119,R134,R149,R164,R179,R194,R209</TD>
+			  <TD align=middle class='list_bg'>EA</TD>
+			  <TD align=middle class='list_bg'>24</TD>
+			</TR>
+		
+			<TR bgColor=#ffffff>
+			  <TD align=left height="24">&nbsp;&nbsp;&nbsp;3</TD>
+			  <TD align=left class='list_bg'>1EP1000310</TD>
+			  <TD align=left class='list_bg'>2000300001</TD>
+			  <TD align=left class='list_bg'>CAP PLA FILM,0.01[uF],25[V],K</TD>
+			  <TD align=left class='list_bg'>C101,C116,C131,C146,C161,C176,C191,C206,<br>C221,C236,C251,C266,C281,C296,C311,C326,<br>R101,R116,R131,R146,R161,R176,R191,R206</TD>
+			  <TD align=middle class='list_bg'>EA</TD>
+			  <TD align=middle class='list_bg'>24</TD>
+			</TR>
+		
+			<TR bgColor=#ffffff>
+			  <TD align=left height="24">&nbsp;&nbsp;&nbsp;3</TD>
+			  <TD align=left class='list_bg'>1EP1000310</TD>
+			  <TD align=left class='list_bg'>2020100002</TD>
+			  <TD align=left class='list_bg'>IND,CIL21J3R3KN,1[H],0.01</TD>
+			  <TD align=left class='list_bg'>D102,D107,D112,D117,D122,D127,D132,D137</TD>
+			  <TD align=middle class='list_bg'>EA</TD>
+			  <TD align=middle class='list_bg'>8</TD>
+			</TR>
+		
+			<TR bgColor=#ffffff>
+			  <TD align=left height="24">&nbsp;&nbsp;&nbsp;3</TD>
+			  <TD align=left class='list_bg'>1EP1000310</TD>
+			  <TD align=left class='list_bg'>2150100001</TD>
+			  <TD align=left class='list_bg'>DIODE BRID,BRF2A16NB</TD>
+			  <TD align=left class='list_bg'>D105,D110,D115,D120,D125,D130,D135,D140</TD>
+			  <TD align=middle class='list_bg'>EA</TD>
+			  <TD align=middle class='list_bg'>8</TD>
+			</TR>
+		
+			<TR bgColor=#ffffff>
+			  <TD align=left height="24">&nbsp;&nbsp;2</TD>
+			  <TD align=left class='list_bg'>1ES1000100</TD>
+			  <TD align=left class='list_bg'>1EP1000610</TD>
+			  <TD align=left class='list_bg'>PCB Manual Ass`y</TD>
+			  <TD align=left class='list_bg'></TD>
+			  <TD align=middle class='list_bg'>EA</TD>
+			  <TD align=middle class='list_bg'>1</TD>
+			</TR>
+		
+			<TR bgColor=#ffffff>
+			  <TD align=left height="24">&nbsp;&nbsp;&nbsp;3</TD>
+			  <TD align=left class='list_bg'>1EP1000610</TD>
+			  <TD align=left class='list_bg'>1EP1000620</TD>
+			  <TD align=left class='list_bg'>PCB 이형 Auto Ass`y</TD>
+			  <TD align=left class='list_bg'></TD>
+			  <TD align=middle class='list_bg'>EA</TD>
+			  <TD align=middle class='list_bg'>1</TD>
+			</TR>
+		
+			<TR bgColor=#ffffff>
+			  <TD align=left height="24">&nbsp;&nbsp;&nbsp;&nbsp;4</TD>
+			  <TD align=left class='list_bg'>1EP1000620</TD>
+			  <TD align=left class='list_bg'>1EP1000640</TD>
+			  <TD align=left class='list_bg'>PCB Axial Auto Ass`y</TD>
+			  <TD align=left class='list_bg'></TD>
+			  <TD align=middle class='list_bg'>EA</TD>
+			  <TD align=middle class='list_bg'>1</TD>
+			</TR>
+		
+			<TR bgColor=#ffffff>
+			  <TD align=left height="24">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5</TD>
+			  <TD align=left class='list_bg'>1EP1000640</TD>
+			  <TD align=left class='list_bg'>2000100004</TD>
+			  <TD align=left class='list_bg'>CAP AL ELEC,0.1[uF],16[V],J,[℃]</TD>
+			  <TD align=left class='list_bg'>C113</TD>
+			  <TD align=middle class='list_bg'>EA</TD>
+			  <TD align=middle class='list_bg'>1</TD>
+			</TR>
+		
+			<TR bgColor=#ffffff>
+			  <TD align=left height="24">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5</TD>
+			  <TD align=left class='list_bg'>1EP1000640</TD>
+			  <TD align=left class='list_bg'>2000200006</TD>
+			  <TD align=left class='list_bg'>CAP CER,0.1[uF],25[V],J,[℃]</TD>
+			  <TD align=left class='list_bg'>C128,C143,C158,C173,C188,C203,C218,C233,<br>C248,C263,C278,C293,C308,C323,C338,R113,<br>R128,R143,R158,R173,R188,R203,R218</TD>
+			  <TD align=middle class='list_bg'>EA</TD>
+			  <TD align=middle class='list_bg'>23</TD>
+			</TR>
+		
+			<TR bgColor=#ffffff>
+			  <TD align=left height="24">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5</TD>
+			  <TD align=left class='list_bg'>1EP1000640</TD>
+			  <TD align=left class='list_bg'>2000200012</TD>
+			  <TD align=left class='list_bg'>CAP CER,820[pF],50[V],J</TD>
+			  <TD align=left class='list_bg'>C103,C118,C133,C148,C163,C178,C193,C208,<br>C223,C238,C253,C268,C283,C298,C313,C328,<br>R103,R118,R133,R148,R163,R178,R193,R208</TD>
+			  <TD align=middle class='list_bg'>EA</TD>
+			  <TD align=middle class='list_bg'>24</TD>
+			</TR>
+		
+			<TR bgColor=#ffffff>
+			  <TD align=left height="24">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5</TD>
+			  <TD align=left class='list_bg'>1EP1000640</TD>
+			  <TD align=left class='list_bg'>2000400007</TD>
+			  <TD align=left class='list_bg'>CAP TAN,10[uF],16[V],K,3216</TD>
+			  <TD align=left class='list_bg'>C109,C124,C139,C154,C169,C184,C199,C214,<br>C229,C244,C259,C274,C289,C304,C319,C334,<br>R109,R124,R139,R154,R169,R184,R199,R214</TD>
+			  <TD align=middle class='list_bg'>EA</TD>
+			  <TD align=middle class='list_bg'>24</TD>
+			</TR>
+		
+			<TR bgColor=#ffffff>
+			  <TD align=left height="24">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5</TD>
+			  <TD align=left class='list_bg'>1EP1000640</TD>
+			  <TD align=left class='list_bg'>2000700001</TD>
+			  <TD align=left class='list_bg'>CAP OTH,10[uF],16[V],K</TD>
+			  <TD align=left class='list_bg'>C106,C121,C136,C151,C166,C181,C196,C211,<br>C226,C241,C256,C271,C286,C301,C316,C331,<br>R106,R121,R136,R151,R166,R181,R196,R211</TD>
+			  <TD align=middle class='list_bg'>EA</TD>
+			  <TD align=middle class='list_bg'>24</TD>
+			</TR>
+		
+			<TR bgColor=#ffffff>
+			  <TD align=left height="24">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5</TD>
+			  <TD align=left class='list_bg'>1EP1000640</TD>
+			  <TD align=left class='list_bg'>2020100003</TD>
+			  <TD align=left class='list_bg'>IND,FI-B3216-102,1[H],K</TD>
+			  <TD align=left class='list_bg'>D101,D106,D111,D116,D121,D126,D131,D136</TD>
+			  <TD align=middle class='list_bg'>EA</TD>
+			  <TD align=middle class='list_bg'>8</TD>
+			</TR>
+		
+			<TR bgColor=#ffffff>
+			  <TD align=left height="24">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5</TD>
+			  <TD align=left class='list_bg'>1EP1000640</TD>
+			  <TD align=left class='list_bg'>2150100002</TD>
+			  <TD align=left class='list_bg'>DIODE BRID,DIO040526-1254</TD>
+			  <TD align=left class='list_bg'>D104,D109,D114,D119,D124,D129,D134,D139</TD>
+			  <TD align=middle class='list_bg'>EA</TD>
+			  <TD align=middle class='list_bg'>8</TD>
+			</TR>
+		
+			<TR bgColor=#ffffff>
+			  <TD align=left height="24">&nbsp;&nbsp;&nbsp;&nbsp;4</TD>
+			  <TD align=left class='list_bg'>1EP1000620</TD>
+			  <TD align=left class='list_bg'>2000100004</TD>
+			  <TD align=left class='list_bg'>CAP AL ELEC,0.1[uF],16[V],J,[℃]</TD>
+			  <TD align=left class='list_bg'>C112,C127,C142,C157,C172,C187,C202,C217,<br>C232,C247,C262,C277,C292,C307,C322,C337,<br>R112,R127,R142,R157,R172,R187,R202,R217</TD>
+			  <TD align=middle class='list_bg'>EA</TD>
+			  <TD align=middle class='list_bg'>24</TD>
+			</TR>
+		
+			<TR bgColor=#ffffff>
+			  <TD align=left height="24">&nbsp;&nbsp;&nbsp;&nbsp;4</TD>
+			  <TD align=left class='list_bg'>1EP1000620</TD>
+			  <TD align=left class='list_bg'>2000200005</TD>
+			  <TD align=left class='list_bg'>CAP CER,1[uF],50[V],J,[℃]</TD>
+			  <TD align=left class='list_bg'>C115,C130,C145,C160,C175,C190,C205,C220,<br>C235,C250,C265,C280,C295,C310,C325,C340,<br>R115,R130,R145,R160,R175,R190,R205,R220</TD>
+			  <TD align=middle class='list_bg'>EA</TD>
+			  <TD align=middle class='list_bg'>24</TD>
+			</TR>
+		
+			<TR bgColor=#ffffff>
+			  <TD align=left height="24">&nbsp;&nbsp;&nbsp;&nbsp;4</TD>
+			  <TD align=left class='list_bg'>1EP1000620</TD>
+			  <TD align=left class='list_bg'>2000200009</TD>
+			  <TD align=left class='list_bg'>CAP CER,0.01[uF],50[V],K</TD>
+			  <TD align=left class='list_bg'>C108,C123,C138,C153,C168,C183,C198,C213,<br>C228,C243,C258,C273,C288,C303,C318,C333,<br>R108,R123,R138,R153,R168,R183,R198,R213</TD>
+			  <TD align=middle class='list_bg'>EA</TD>
+			  <TD align=middle class='list_bg'>24</TD>
+			</TR>
+		
+			<TR bgColor=#ffffff>
+			  <TD align=left height="24">&nbsp;&nbsp;&nbsp;&nbsp;4</TD>
+			  <TD align=left class='list_bg'>1EP1000620</TD>
+			  <TD align=left class='list_bg'>2000200013</TD>
+			  <TD align=left class='list_bg'>CAP CER,10[pF],50[V],J</TD>
+			  <TD align=left class='list_bg'>C102,C117,C132,C147,C162,C177,C192,C207,<br>C222,C237,C252,C267,C282,C297,C312,C327,<br>R102,R117,R132,R147,R162,R177,R192,R207</TD>
+			  <TD align=middle class='list_bg'>EA</TD>
+			  <TD align=middle class='list_bg'>24</TD>
+			</TR>
+		
+			<TR bgColor=#ffffff>
+			  <TD align=left height="24">&nbsp;&nbsp;&nbsp;&nbsp;4</TD>
+			  <TD align=left class='list_bg'>1EP1000620</TD>
+			  <TD align=left class='list_bg'>2000700002</TD>
+			  <TD align=left class='list_bg'>CAP OTH,1000[pF],50[V],K,[℃]</TD>
+			  <TD align=left class='list_bg'>C105,C120,C135,C150,C165,C180,C195,C210,<br>C225,C240,C255,C270,C285,C300,C315,C330,<br>R105,R120,R135,R150,R165,R180,R195,R210</TD>
+			  <TD align=middle class='list_bg'>EA</TD>
+			  <TD align=middle class='list_bg'>24</TD>
+			</TR>
+		
+			<TR bgColor=#ffffff>
+			  <TD align=left height="24">&nbsp;&nbsp;&nbsp;&nbsp;4</TD>
+			  <TD align=left class='list_bg'>1EP1000620</TD>
+			  <TD align=left class='list_bg'>2020100001</TD>
+			  <TD align=left class='list_bg'>IND,HF70ACC575018,1[H],0.02</TD>
+			  <TD align=left class='list_bg'>D103,D108,D113,D118,D123,D128,D133,D138</TD>
+			  <TD align=middle class='list_bg'>EA</TD>
+			  <TD align=middle class='list_bg'>8</TD>
+			</TR>
+		
+			<TR bgColor=#ffffff>
+			  <TD align=left height="24">&nbsp;&nbsp;&nbsp;3</TD>
+			  <TD align=left class='list_bg'>1EP1000610</TD>
+			  <TD align=left class='list_bg'>2000100003</TD>
+			  <TD align=left class='list_bg'>CAP AL ELEC,0.1[uF],25[V],K,[℃]</TD>
+			  <TD align=left class='list_bg'>C114,C129,C144,C159,C174,C189,C204,C219,<br>C234,C249,C264,C279,C294,C309,C324,C339,<br>R114,R129,R144,R159,R174,R189,R204,R219</TD>
+			  <TD align=middle class='list_bg'>EA</TD>
+			  <TD align=middle class='list_bg'>24</TD>
+			</TR>
+		
+			<TR bgColor=#ffffff>
+			  <TD align=left height="24">&nbsp;&nbsp;&nbsp;3</TD>
+			  <TD align=left class='list_bg'>1EP1000610</TD>
+			  <TD align=left class='list_bg'>2000200007</TD>
+			  <TD align=left class='list_bg'>CAP CER,120[pF],50[V],J</TD>
+			  <TD align=left class='list_bg'>C111,C126,C141,C156,C171,C186,C201,C216,<br>C231,C246,C261,C276,C291,C306,C321,C336,<br>R111,R126,R141,R156,R171,R186,R201,R216</TD>
+			  <TD align=middle class='list_bg'>EA</TD>
+			  <TD align=middle class='list_bg'>24</TD>
+			</TR>
+		
+			<TR bgColor=#ffffff>
+			  <TD align=left height="24">&nbsp;&nbsp;&nbsp;3</TD>
+			  <TD align=left class='list_bg'>1EP1000610</TD>
+			  <TD align=left class='list_bg'>2000200008</TD>
+			  <TD align=left class='list_bg'>CAP CER,470[pF],50[V],J</TD>
+			  <TD align=left class='list_bg'>C110,C125,C140,C155,C170,C185,C200,C215,<br>C230,C245,C260,C275,C290,C305,C320,C335,<br>R110,R125,R140,R155,R170,R185,R200,R215</TD>
+			  <TD align=middle class='list_bg'>EA</TD>
+			  <TD align=middle class='list_bg'>24</TD>
+			</TR>
+		
+			<TR bgColor=#ffffff>
+			  <TD align=left height="24">&nbsp;&nbsp;&nbsp;3</TD>
+			  <TD align=left class='list_bg'>1EP1000610</TD>
+			  <TD align=left class='list_bg'>2000200010</TD>
+			  <TD align=left class='list_bg'>CAP CER,0.1[uF],25[V],K</TD>
+			  <TD align=left class='list_bg'>C107,C122,C137,C152,C167,C182,C197,C212,<br>C227,C242,C257,C272,C287,C302,C317,C332,<br>R107,R122,R137,R152,R167,R182,R197,R212</TD>
+			  <TD align=middle class='list_bg'>EA</TD>
+			  <TD align=middle class='list_bg'>24</TD>
+			</TR>
+		
+			<TR bgColor=#ffffff>
+			  <TD align=left height="24">&nbsp;&nbsp;&nbsp;3</TD>
+			  <TD align=left class='list_bg'>1EP1000610</TD>
+			  <TD align=left class='list_bg'>2000200011</TD>
+			  <TD align=left class='list_bg'>CAP CER,33[pF],50[V],J</TD>
+			  <TD align=left class='list_bg'>C104,C119,C134,C149,C164,C179,C194,C209,<br>C224,C239,C254,C269,C284,C299,C314,C329,<br>R104,R119,R134,R149,R164,R179,R194,R209</TD>
+			  <TD align=middle class='list_bg'>EA</TD>
+			  <TD align=middle class='list_bg'>24</TD>
+			</TR>
+		
+			<TR bgColor=#ffffff>
+			  <TD align=left height="24">&nbsp;&nbsp;&nbsp;3</TD>
+			  <TD align=left class='list_bg'>1EP1000610</TD>
+			  <TD align=left class='list_bg'>2000300001</TD>
+			  <TD align=left class='list_bg'>CAP PLA FILM,0.01[uF],25[V],K</TD>
+			  <TD align=left class='list_bg'>C101,C116,C131,C146,C161,C176,C191,C206,<br>C221,C236,C251,C266,C281,C296,C311,C326,<br>R101,R116,R131,R146,R161,R176,R191,R206</TD>
+			  <TD align=middle class='list_bg'>EA</TD>
+			  <TD align=middle class='list_bg'>24</TD>
+			</TR>
+		
+			<TR bgColor=#ffffff>
+			  <TD align=left height="24">&nbsp;&nbsp;&nbsp;3</TD>
+			  <TD align=left class='list_bg'>1EP1000610</TD>
+			  <TD align=left class='list_bg'>2020100002</TD>
+			  <TD align=left class='list_bg'>IND,CIL21J3R3KN,1[H],0.01</TD>
+			  <TD align=left class='list_bg'>D102,D107,D112,D117,D122,D127,D132,D137</TD>
+			  <TD align=middle class='list_bg'>EA</TD>
+			  <TD align=middle class='list_bg'>8</TD>
+			</TR>
+		
+			<TR bgColor=#ffffff>
+			  <TD align=left height="24">&nbsp;&nbsp;&nbsp;3</TD>
+			  <TD align=left class='list_bg'>1EP1000610</TD>
+			  <TD align=left class='list_bg'>2150100001</TD>
+			  <TD align=left class='list_bg'>DIODE BRID,BRF2A16NB</TD>
+			  <TD align=left class='list_bg'>D105,D110,D115,D120,D125,D130,D135,D140</TD>
+			  <TD align=middle class='list_bg'>EA</TD>
+			  <TD align=middle class='list_bg'>8</TD>
+			</TR>
+	
+</TBODY></TABLE></TD></TR></TBODY></TABLE>
+
+</body>
+</html>
+

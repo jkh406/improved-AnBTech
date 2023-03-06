@@ -1,0 +1,210 @@
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[category_cust]') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
+drop table [dbo].[category_cust]
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[code_master]') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
+drop table [dbo].[code_master]
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[goods_structure]') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
+drop table [dbo].[goods_structure]
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[goods_structure_test]') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
+drop table [dbo].[goods_structure_test]
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[item_class]') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
+drop table [dbo].[item_class]
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[item_master]') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
+drop table [dbo].[item_master]
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[item_spec]') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
+drop table [dbo].[item_spec]
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[list_cust]') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
+drop table [dbo].[list_cust]
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[prg_privilege]') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
+drop table [dbo].[prg_privilege]
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[project_info]') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
+drop table [dbo].[project_info]
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[spec_code]') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
+drop table [dbo].[spec_code]
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[test]') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
+drop table [dbo].[test]
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[v_customer_list]') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
+drop table [dbo].[v_customer_list]
+GO
+
+CREATE TABLE [dbo].[category_cust] (
+	[id] [int] IDENTITY (1, 1) NOT NULL ,
+	[code] [varchar] (15) COLLATE Korean_Wansung_CI_AS NOT NULL ,
+	[name] [varchar] (30) COLLATE Korean_Wansung_CI_AS NOT NULL ,
+	[reg_date] [varchar] (20) COLLATE Korean_Wansung_CI_AS NOT NULL 
+) ON [PRIMARY]
+GO
+
+CREATE TABLE [dbo].[code_master] (
+	[id] [tinyint] IDENTITY (1, 1) NOT NULL ,
+	[ag_id] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[classify] [char] (2) COLLATE Korean_Wansung_CI_AS NOT NULL ,
+	[flag] [char] (1) COLLATE Korean_Wansung_CI_AS NOT NULL ,
+	[c_year] [varchar] (4) COLLATE Korean_Wansung_CI_AS NOT NULL ,
+	[c_serial] [varchar] (5) COLLATE Korean_Wansung_CI_AS NOT NULL ,
+	[c_serial2] [varchar] (3) COLLATE Korean_Wansung_CI_AS NULL ,
+	[code] [varchar] (15) COLLATE Korean_Wansung_CI_AS NULL ,
+	[approve_stat] [char] (1) COLLATE Korean_Wansung_CI_AS NOT NULL ,
+	[c_why] [text] COLLATE Korean_Wansung_CI_AS NULL 
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+
+CREATE TABLE [dbo].[goods_structure] (
+	[ag_id] [varchar] (30) COLLATE Korean_Wansung_CI_AS NOT NULL ,
+	[ag_name] [varchar] (50) COLLATE Korean_Wansung_CI_AS NOT NULL ,
+	[ag_name2] [varchar] (50) COLLATE Korean_Wansung_CI_AS NULL ,
+	[fg_code] [varchar] (20) COLLATE Korean_Wansung_CI_AS NULL ,
+	[assy_code] [varchar] (20) COLLATE Korean_Wansung_CI_AS NULL ,
+	[ag_level] [varchar] (2) COLLATE Korean_Wansung_CI_AS NOT NULL ,
+	[ag_ancestor] [varchar] (30) COLLATE Korean_Wansung_CI_AS NOT NULL ,
+	[ag_short_name] [varchar] (5) COLLATE Korean_Wansung_CI_AS NULL ,
+	[ag_desc] [varchar] (5000) COLLATE Korean_Wansung_CI_AS NULL ,
+	[reg_date] [varchar] (15) COLLATE Korean_Wansung_CI_AS NULL ,
+	[register] [varchar] (10) COLLATE Korean_Wansung_CI_AS NULL ,
+	[p_id] [varchar] (20) COLLATE Korean_Wansung_CI_AS NULL 
+) ON [PRIMARY]
+GO
+
+CREATE TABLE [dbo].[goods_structure_test] (
+	[ag_id] [tinyint] NOT NULL ,
+	[ag_name] [varchar] (50) COLLATE Korean_Wansung_CI_AS NOT NULL ,
+	[ag_name2] [varchar] (50) COLLATE Korean_Wansung_CI_AS NULL ,
+	[fg_code] [varchar] (20) COLLATE Korean_Wansung_CI_AS NULL ,
+	[assy_code] [varchar] (20) COLLATE Korean_Wansung_CI_AS NULL ,
+	[ag_level] [varchar] (2) COLLATE Korean_Wansung_CI_AS NOT NULL ,
+	[ag_ancestor] [tinyint] NOT NULL ,
+	[ag_short_name] [varchar] (5) COLLATE Korean_Wansung_CI_AS NULL ,
+	[ag_desc] [varchar] (255) COLLATE Korean_Wansung_CI_AS NULL ,
+	[reg_date] [varchar] (15) COLLATE Korean_Wansung_CI_AS NULL ,
+	[register] [varchar] (10) COLLATE Korean_Wansung_CI_AS NULL ,
+	[p_id] [varchar] (20) COLLATE Korean_Wansung_CI_AS NULL 
+) ON [PRIMARY]
+GO
+
+CREATE TABLE [dbo].[item_class] (
+	[id] [int] IDENTITY (175, 1) NOT NULL ,
+	[i_code] [varchar] (10) COLLATE Korean_Wansung_CI_AS NOT NULL ,
+	[i_name] [varchar] (30) COLLATE Korean_Wansung_CI_AS NOT NULL ,
+	[i_level] [varchar] (1) COLLATE Korean_Wansung_CI_AS NOT NULL ,
+	[i_ancestor] [varchar] (10) COLLATE Korean_Wansung_CI_AS NOT NULL 
+) ON [PRIMARY]
+GO
+
+CREATE TABLE [dbo].[item_master] (
+	[im_id] [int] IDENTITY (1, 1) NOT NULL ,
+	[im_class] [varchar] (15) COLLATE Korean_Wansung_CI_AS NULL ,
+	[im_part_no] [varchar] (15) COLLATE Korean_Wansung_CI_AS NULL ,
+	[im_desc] [varchar] (100) COLLATE Korean_Wansung_CI_AS NULL ,
+	[im_maker_part_no] [varchar] (50) COLLATE Korean_Wansung_CI_AS NULL ,
+	[im_maker_code] [varchar] (20) COLLATE Korean_Wansung_CI_AS NULL ,
+	[im_spec_items] [varchar] (255) COLLATE Korean_Wansung_CI_AS NULL ,
+	[im_file_name] [varchar] (255) COLLATE Korean_Wansung_CI_AS NULL ,
+	[im_umask] [varchar] (255) COLLATE Korean_Wansung_CI_AS NULL ,
+	[im_file_size] [varchar] (50) COLLATE Korean_Wansung_CI_AS NULL ,
+	[im_file_type] [varchar] (255) COLLATE Korean_Wansung_CI_AS NULL ,
+	[im_register] [varchar] (20) COLLATE Korean_Wansung_CI_AS NULL ,
+	[im_reg_date] [varchar] (15) COLLATE Korean_Wansung_CI_AS NULL ,
+	[im_approve_stat] [varchar] (1) COLLATE Korean_Wansung_CI_AS NULL ,
+	[im_approve_date] [varchar] (15) COLLATE Korean_Wansung_CI_AS NULL ,
+	[im_del_stat] [varchar] (1) COLLATE Korean_Wansung_CI_AS NULL ,
+	[im_del_date] [varchar] (15) COLLATE Korean_Wansung_CI_AS NULL 
+) ON [PRIMARY]
+GO
+
+CREATE TABLE [dbo].[item_spec] (
+	[id] [int] IDENTITY (1, 1) NOT NULL ,
+	[code_b] [varchar] (5) COLLATE Korean_Wansung_CI_AS NOT NULL ,
+	[code_m] [varchar] (5) COLLATE Korean_Wansung_CI_AS NOT NULL ,
+	[spec_code] [varchar] (200) COLLATE Korean_Wansung_CI_AS NOT NULL ,
+	[desc_count] [varchar] (50) COLLATE Korean_Wansung_CI_AS NULL 
+) ON [PRIMARY]
+GO
+
+CREATE TABLE [dbo].[list_cust] (
+	[id] [int] IDENTITY (1, 1) NOT NULL ,
+	[category_code] [varchar] (15) COLLATE Korean_Wansung_CI_AS NOT NULL ,
+	[code] [varchar] (15) COLLATE Korean_Wansung_CI_AS NOT NULL ,
+	[name] [varchar] (50) COLLATE Korean_Wansung_CI_AS NOT NULL ,
+	[address] [varchar] (100) COLLATE Korean_Wansung_CI_AS NULL ,
+	[tel] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[fax] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[c_number] [char] (20) COLLATE Korean_Wansung_CI_AS NULL ,
+	[status] [char] (1) COLLATE Korean_Wansung_CI_AS NULL ,
+	[memo] [text] COLLATE Korean_Wansung_CI_AS NULL ,
+	[reg_date] [varchar] (15) COLLATE Korean_Wansung_CI_AS NULL 
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+
+CREATE TABLE [dbo].[prg_privilege] (
+	[id] [tinyint] NOT NULL ,
+	[code_b] [varchar] (5) COLLATE Korean_Wansung_CI_AS NOT NULL ,
+	[name_b] [varchar] (20) COLLATE Korean_Wansung_CI_AS NOT NULL ,
+	[code_s] [varchar] (5) COLLATE Korean_Wansung_CI_AS NOT NULL ,
+	[name_s] [varchar] (50) COLLATE Korean_Wansung_CI_AS NOT NULL ,
+	[owner] [text] COLLATE Korean_Wansung_CI_AS NULL 
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+
+CREATE TABLE [dbo].[project_info] (
+	[p_id] [int] IDENTITY (1, 1) NOT NULL ,
+	[p_name] [varchar] (100) COLLATE Korean_Wansung_CI_AS NULL ,
+	[p_code] [varchar] (20) COLLATE Korean_Wansung_CI_AS NULL ,
+	[p_date] [varchar] (10) COLLATE Korean_Wansung_CI_AS NULL ,
+	[p_master] [varchar] (50) COLLATE Korean_Wansung_CI_AS NULL 
+) ON [PRIMARY]
+GO
+
+CREATE TABLE [dbo].[spec_code] (
+	[s_id] [int] IDENTITY (1, 1) NOT NULL ,
+	[s_code] [varchar] (5) COLLATE Korean_Wansung_CI_AS NOT NULL ,
+	[s_name] [varchar] (30) COLLATE Korean_Wansung_CI_AS NOT NULL ,
+	[s_value] [varchar] (255) COLLATE Korean_Wansung_CI_AS NOT NULL ,
+	[s_unit] [varchar] (50) COLLATE Korean_Wansung_CI_AS NOT NULL ,
+	[s_desc] [text] COLLATE Korean_Wansung_CI_AS NULL 
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+
+CREATE TABLE [dbo].[test] (
+	[id] [varchar] (50) COLLATE Korean_Wansung_CI_AS NULL ,
+	[name] [varchar] (50) COLLATE Korean_Wansung_CI_AS NULL 
+) ON [PRIMARY]
+GO
+
+CREATE TABLE [dbo].[v_customer_list] (
+	[class_name] [varchar] (30) COLLATE Korean_Wansung_CI_AS NOT NULL ,
+	[id] [int] NOT NULL ,
+	[code] [varchar] (15) COLLATE Korean_Wansung_CI_AS NOT NULL ,
+	[name] [varchar] (50) COLLATE Korean_Wansung_CI_AS NOT NULL ,
+	[address] [varchar] (100) COLLATE Korean_Wansung_CI_AS NULL ,
+	[tel] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[fax] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[c_number] [char] (20) COLLATE Korean_Wansung_CI_AS NULL ,
+	[status] [char] (1) COLLATE Korean_Wansung_CI_AS NOT NULL ,
+	[memo] [text] COLLATE Korean_Wansung_CI_AS NULL ,
+	[reg_date] [varchar] (15) COLLATE Korean_Wansung_CI_AS NOT NULL 
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+

@@ -1,0 +1,7 @@
+
+CLASS_PATH
+.;c:\jdk1.3\lib\tools.jar;c:\tomcat4\common\lib\servlet.jar;c:\tomcat4\webapps\anb\WEB-INF\classes\;c:\tomcat4\common\lib\msutil.jar;c:\tomcat4\common\lib\mssqlserver.jar;c:\tomcat4\common\lib\msbase.jar;
+
+
+path
+%JAVA_HOME%/bin;C:\Program Files\ESTsoft\ALZip\

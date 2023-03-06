@@ -1,0 +1,65 @@
+<html>
+<head>
+<title>COM Port Communications</title>
+<SCRIPT LANGUAGE=javascript>
+function ComPortButton_onclick(){
+    if(Frm_Main.MSComm1.PortOpen==false){
+            Frm_Main.MSComm1.Settings = "28800,N,8,1"
+            Frm_Main.MSComm1.InputLen = 1
+         Frm_Main.MSComm1.CommPort = Frm_Main.PortNumberDisplay.value;
+         Frm_Main.MSComm1.PortOpen=true;
+         Frm_Main.ComPortButton.value="Close";
+         }
+    else{
+         Frm_Main.MSComm1.PortOpen=false;
+         Frm_Main.ComPortButton.value="Open";
+         }
+}
+
+function SendButton_onclick() {
+    if(Frm_Main.MSComm1.PortOpen==true){
+         Frm_Main.MSComm1.Output=Frm_Main.SendDisplay.value + String.fromCharCode(13)
+         }
+    else{
+         alert("You need to open the COM port first");
+         }
+}
+
+function MSComm1_OnComm() {
+    InputString = Frm_Main.MSComm1.Input;
+    Frm_Main.ReceiveDisplay.value = Frm_Main.ReceiveDisplay.value + InputString;
+}
+</SCRIPT>
+<SCRIPT LANGUAGE=javascript FOR='MSComm1' EVENT='OnComm'>
+MSComm1_OnComm()
+</SCRIPT>
+
+<body LANGUAGE=javascript>
+<P>This web page communicates over a COM port.
+<P>
+<form id="Frm_Main" method="post">
+<OBJECT id='MSComm1' style="LEFT: 0px; TOP: 0px" 
+		classid='clsid:648A5600-2C6E-101B-82B6-000000000014'>
+		<PARAM NAME="RThreshold" VALUE="1">
+		<PARAM NAME="InputMode" VALUE="comInputModeText">
+</OBJECT>
+
+<P>COM Port Number 
+<SELECT NAME="PortNumberDisplay" id=PortNumberDisplay style="WIDTH: 41px" SIZE="1">
+	<OPTION VALUE="1" SELECTED>1
+	<OPTION VALUE="2">2
+	<OPTION VALUE="3">3
+	<OPTION VALUE="4">4
+	</OPTION>
+</SELECT> 
+
+<INPUT language=javascript id=ComPortButton style="LEFT: 340px; TOP: 33px" onclick="return ComPortButton_onclick()" type=button value=Open name=ComPortButton<P>
+<INPUT id=SendButton name=SendButton style="LEFT: 68px; TOP: 110px" type=button value="Send" LANGUAGE =javascript onclick="return SendButton_onclick()">&nbsp; 
+
+<P>
+<INPUT id=SendDisplay><BR>
+<TEXTAREA id=ReceiveDisplay style="WIDTH: 302px; HEIGHT: 250px" rows=5 cols=33></TEXTAREA></P>
+</form>      
+</body>
+</html>
+

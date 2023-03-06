@@ -1,0 +1,241 @@
+<HTML><HEAD><TITLE>Plusware 3.0</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=euc-kr">
+<STYLE type=text/css>INPUT {
+	FONT-SIZE: 9pt; COLOR: black
+}
+SELECT {
+	FONT-SIZE: 9pt; COLOR: black
+}
+TEXTAREA {
+	FONT-SIZE: 9pt; COLOR: black
+}
+BODY {
+	FONT-SIZE: 9pt; LINE-HEIGHT: 150%
+}
+TD {
+	FONT-WEIGHT: normal; FONT-SIZE: 9pt; LINE-HEIGHT: 150%; FONT-STYLE: normal; FONT-VARIANT: normal
+}
+A:link {
+	FONT-WEIGHT: normal; FONT-SIZE: 9pt; COLOR: #000000; FONT-STYLE: normal; FONT-VARIANT: normal; TEXT-DECORATION: none
+}
+A:visited {
+	FONT-WEIGHT: normal; FONT-SIZE: 9pt; COLOR: #000000; FONT-STYLE: normal; FONT-VARIANT: normal; TEXT-DECORATION: none
+}
+A:active {
+	FONT-WEIGHT: normal; FONT-SIZE: 9pt; COLOR: #000000; FONT-STYLE: normal; FONT-VARIANT: normal; TEXT-DECORATION: none
+}
+A:hover {
+	FONT-WEIGHT: normal; FONT-SIZE: 9pt; COLOR: #0000ff; FONT-STYLE: normal; FONT-VARIANT: normal; TEXT-DECORATION: none
+}
+BODY {
+	SCROLLBAR-FACE-COLOR: #e2e2e2; SCROLLBAR-SHADOW-COLOR: #9b9b9b; SCROLLBAR-3DLIGHT-COLOR: #9b9b9b; SCROLLBAR-ARROW-COLOR: #ffffff; SCROLLBAR-DARKSHADOW-COLOR: #ffffff; SCROLLBAR-BASE-COLOR: #e2e2e2
+}
+.text {
+	BORDER-RIGHT: #000000 1px solid; BORDER-TOP: #000000 1px solid; FONT: 9pt 굴림; BORDER-LEFT: #000000 1px solid; COLOR: #000000; BORDER-BOTTOM: #000000 1px solid; BACKGROUND-COLOR: #ffffff
+}
+.text1 {
+	BORDER-RIGHT: #000000 1px solid; BORDER-TOP: #000000 0px solid; FONT: 9pt 굴림; BORDER-LEFT: #000000 1px solid; COLOR: #000000; BORDER-BOTTOM: #000000 0px solid; BACKGROUND-COLOR: #ffffff
+}
+.imoborder {
+	BORDER-RIGHT: #ff9900 1px solid; BORDER-TOP: #ff6600 0px solid; BORDER-LEFT: 0px solid; BORDER-BOTTOM: #ff6600 0px solid
+}
+.blackborder {
+	BORDER-RIGHT: #ffffff 1px solid; BORDER-TOP: #ffffff 1px solid; BORDER-LEFT: #ffffff 1px solid; BORDER-BOTTOM: #ffffff 1px solid
+}
+.imgborder {
+	BORDER-RIGHT: black 1px solid; BORDER-TOP: #000000 1px solid; BORDER-LEFT: black 1px solid; BORDER-BOTTOM: black 1px solid
+}
+</STYLE>
+
+<SCRIPT language=Javascript>
+	var showing = false;
+	var objID = '';
+	var objWriter = '';
+	var objNameless = '';
+	var objBoardCD = '1';
+	var objBoardName = '최근게시물';
+	var objFolderAdmin = 'N';
+	re = /&/g;
+	objBoardName = objBoardName.replace(re,"%26");
+
+	var objEmpower = 'N';
+	var objRootCD = '1';
+	var strStatusNo = '';
+	var objClass = 'B';
+	var totalCount;
+	var recCount;
+	var checkeditem = 0;
+	var strSort   = "3";
+	var strOrder  = "1";
+	
+	var newWindowWidth = 885; //parseInt((window.screen.availWidth) * 0.7 )
+	var newWindowHeigth = 600; //parseInt((window.screen.availHeight) * 0.7)
+</SCRIPT>
+
+<SCRIPT language=JavaScript src="lib/menu.js"></SCRIPT>
+
+<SCRIPT language=JavaScript src="lib/MM_ImgAction.js"></SCRIPT>
+
+<SCRIPT language=JavaScript src="lib/fnMouseAction.js"></SCRIPT>
+<!--마우스 액션에 따른 함수들 : fnDblClick() , fnMousedown(), fnMenuAct(), fnOver()-->
+<SCRIPT language=JavaScript src="lib/fnList.js"></SCRIPT>
+<!-- MenuBar 기능 함수들 : fnAttach(), fnRefresh(), fnChangePage(), 
+		fnMovePage(), openNew(), fnPreView(), fnDel(), fnSearch(), fnSearchAct() -->
+<SCRIPT language=JavaScript src="lib/fnWriterInfo.js"></SCRIPT>
+<!--작성자 정보보기 함수-->
+<META content="MSHTML 6.00.2800.1170" name=GENERATOR></HEAD>
+<BODY oncontextmenu="return false;" bgColor=#ffffff leftMargin=0 topMargin=0 
+marginheight="0" marginwidth="0">
+<FORM name=frmList onsubmit="return false" action=BbsLst.asp method=post>
+<TABLE height="100%" cellSpacing=0 cellPadding=0 width="100%" border=0 
+valign="top"><!-- Location. ----------------------------------------->
+  <TBODY>
+  <TR height=28>
+    <TD vAlign=top>
+      <TABLE height=28 cellSpacing=0 cellPadding=0 width="100%" 
+      background=img/location_bg.gif border=0>
+        <TBODY>
+        <TR>
+          <TD width=5><IMG src="img/location_left.gif" border=0></TD>
+          <TD style="PADDING-TOP: 10px">&nbsp;&nbsp;<IMG 
+            src="img/location_tep.gif"> <FONT color=#07367d>회사게시판 
+            &gt;최근게시물 [총 1건]</FONT></TD>
+          <TD width=5></TD></TR></TBODY></TABLE></TD></TR><!-- Location. -----------------------------------------><!-- MenuBar. ----------------------------------------->
+  <TR height=32>
+    <TD vAlign=top>
+      <TABLE height=32 cellSpacing=0 cellPadding=0 width="100%" 
+      background=img/button_bg.gif border=0>
+        <TBODY>
+        <TR>
+          <TD width=4><IMG src="img/button_left.gif"></TD>
+          <TD align=middle width=50><IMG 
+            style="FILTER: alpha(opacity=50) gray() dropShadow(color=#dddddd, offX=1, offY=1)" 
+            src="img/write_off.gif" border=0 name=Image99></TD>
+          <TD width=4><IMG src="img/button_tep.gif"></TD>
+          <TD onmouseover="MM_showHideLayers('Layer2','','hide')" align=middle 
+          width=50><SPAN id=spnAttach_off><IMG 
+            style="FILTER: alpha(opacity=50) gray() dropShadow(color=#dddddd, offX=1, offY=1)" 
+            src="img/attach_off.gif" align=absMiddle border=0 
+            name=imgAttach></SPAN> <SPAN id=spnAttach_on 
+            style="DISPLAY: none"><IMG 
+            onmouseover="Javascript:this.src='img/attach_on.gif'; MM_showHideLayers('Layer2','','hide');" 
+            style="CURSOR: hand" onclick=fnAttach() 
+            onmouseout="Javascript:this.src='img/attach_off.gif'" 
+            src="img/attach_off.gif" align=absMiddle border=0 
+            name=imgAttach ;></SPAN> </TD>
+          <TD width=4><IMG src="img/button_tep.gif"></TD>
+          <TD align=middle width=50><A 
+            onmouseover="MM_swapImage('Image23','','img/search_on.gif',1); MM_showHideLayers('Layer2','','hide');" 
+            onmouseout=MM_swapImgRestore() href="javascript:fnSearch();"><IMG 
+            src="img/search_off.gif" border=0 name=Image23></A></TD>
+          <TD width=4><IMG src="img/button_tep.gif"></TD>
+          <TD align=middle width=50><A 
+            onmouseover="MM_swapImage('Image25','','img/delete_on.gif',1); MM_showHideLayers('Layer2','','hide');" 
+            title=삭제 onmouseout=MM_swapImgRestore() 
+            href="javascript:fnDel()"><IMG src="img/delete_off.gif" 
+            border=0 name=Image25></A></TD>
+          <TD width=4><IMG src="img/button_tep.gif"></TD>
+          <TD align=middle width=50><A 
+            onmouseover="MM_swapImage('Image24','','img/reload_on.gif',1); MM_showHideLayers('Layer2','','hide');" 
+            title=새로고침 onmouseout=MM_swapImgRestore() 
+            href="javascript:fnRefresh();"><IMG 
+            src="img/reload_off.gif" border=0 name=Image24></A></TD>
+          <TD width=4><IMG src="img/button_tep.gif"></TD>
+          <TD noWrap align=middle width=70><INPUT 
+            onclick=JavaScript:fnPreView(this); type=checkbox 
+            name=chkPreview>미리보기</TD>
+          <TD width=4><IMG src="img/button_tep.gif"></TD>
+          <TD><IMG height=1 width=1></TD>
+          <TD vAlign=bottom align=right>
+            <TABLE height=29 cellSpacing=0 cellPadding=2 border=0>
+              <TBODY>
+              <TR>
+                <TD noWrap><IMG src="img/arrow_prev_disable.gif" 
+                  align=absMiddle border=0> <INPUT 
+                  onkeypress="Javascript:fnMovePage(this.value,'1');" 
+                  onkeyup="javascript:if (isNaN(this.value) == true ){alert('숫자만 입력 가능합니다.');this.value='1';}" 
+                  style="BORDER-TOP-WIDTH: 1px; BORDER-LEFT-WIDTH: 1px; BORDER-LEFT-COLOR: #a5a5a5; BORDER-BOTTOM-WIDTH: 1px; BORDER-BOTTOM-COLOR: #a5a5a5; FONT: 9pt 굴림; WIDTH: 28px; COLOR: #000000; BORDER-TOP-COLOR: #a5a5a5; BACKGROUND-COLOR: #ffffff; BORDER-RIGHT-WIDTH: 1px; BORDER-RIGHT-COLOR: #a5a5a5" 
+                  size=3 value=1 name=gopage>/1 <IMG 
+                  src="img/arrow_next_disable.gif" align=absMiddle 
+                  border=0> </TD></TR></TBODY></TABLE></TD>
+          <TD width=4><IMG 
+      src="img/button_right.gif"></TD></TR></TBODY></TABLE></TD></TR><!-- MenuBar. -----------------------------------------><!-- List --------------------------------------------->
+  <TR height=160>
+    <TD vAlign=top>
+      <TABLE 
+      onmouseover="MM_showHideLayers('Layer1','','hide'); MM_showHideLayers('Layer2','','hide')" 
+      cellSpacing=0 cellPadding=0 width="100%" border=0>
+        <TBODY>
+        <TR height=22>
+          <TD width=2 background=img/list_bg.gif><IMG 
+            src="img/list_left.gif" border=0></TD>
+          <TD align=middle width=20 background=img/list_bg.gif></TD>
+          <TD width=6 background=img/list_bg.gif><IMG 
+            src="img/list_tep.gif"></TD>
+          <TD align=middle width=15 background=img/list_bg.gif><IMG 
+            src="img/checkimportant.gif"></TD>
+          <TD width=6 background=img/list_bg.gif><IMG 
+            src="img/list_tep.gif"></TD>
+          <TD style="CURSOR: hand" onclick="JavaScript:go_sort('1');" 
+          align=middle 
+            background=img/list_bg.gif>제&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            목 </TD>
+          <TD width=6 background=img/list_bg.gif><IMG 
+            src="img/list_tep.gif"></TD>
+          <TD align=middle width=35 background=img/list_bg.gif>첨부</TD>
+          <TD width=6 background=img/list_bg.gif><IMG 
+            src="img/list_tep.gif"></TD>
+          <TD align=middle width=45 background=img/list_bg.gif>조회수</TD>
+          <TD width=6 background=img/list_bg.gif><IMG 
+            src="img/list_tep.gif"></TD>
+          <TD style="CURSOR: hand" onclick="JavaScript:go_sort('2');" 
+          align=middle width=75 background=img/list_bg.gif>등록자 </TD>
+          <TD width=6 background=img/list_bg.gif><IMG 
+            src="img/list_tep.gif"></TD>
+          <TD style="CURSOR: hand" onclick="JavaScript:go_sort('3');" 
+          align=middle width=124 background=img/list_bg.gif>등록일 <IMG 
+            src="img/sort_down.gif" border=0> </TD>
+          <TD width=2 background=img/list_bg.gif><IMG 
+            src="img/list_right.gif" border=0></TD></TR>
+        <TR 
+        onmousedown="JavaScript:fnMousedown('364',this,'0','ewillow','1','0','43','web','1','SW 통합의 새로운 물결, SES','admin')" 
+        ondblclick="JavaScript:fnDblClick('364','1','1','0','43','web')" 
+        onmouseover=JavaScript:fnOver(this) style="CURSOR: hand">
+          <TD><IMG height=1 width=1><INPUT disabled type=hidden value=364 
+            name=AuthDel1></TD>
+          <TD align=middle><INPUT disabled type=checkbox value=364 
+            name=chkDel1></TD>
+          <TD><IMG height=1 width=1></TD>
+          <TD align=middle width=10></TD>
+          <TD><IMG height=1 width=1></TD>
+          <TD><IMG src="img/list_1.gif" align=absMiddle> SW 통합의 새로운 
+            물결, SES</TD>
+          <TD><IMG height=1 width=1></TD>
+          <TD align=middle>0</TD>
+          <TD><IMG height=1 width=1></TD>
+          <TD align=middle>13</TD>
+          <TD><IMG height=1 width=1></TD>
+          <TD align=middle>류충희</TD>
+          <TD><IMG height=1 width=1></TD>
+          <TD align=middle>2003-08-01 08:14 (금)</TD>
+          <TD><IMG height=1 width=1></TD></TR></TBODY></TABLE></TD></TR>
+  <TR>
+    <TD></TD></TR></TBODY></TABLE>
+<SCRIPT language=JavaScript>
+totalCount = 1;
+</SCRIPT>
+<INPUT type=hidden value=B name=strClass> <INPUT type=hidden value=1 
+name=BoardCD> <INPUT type=hidden value=최근게시물 name=BbsName> <INPUT type=hidden 
+value="회사게시판 >" name=totalpath> <INPUT type=hidden value=17 name=PageSize> 
+<INPUT type=hidden value=1 name=RootCD> <INPUT type=hidden value=1 
+name=strCurrPage> <INPUT type=hidden value=1 name=hidI> <INPUT type=hidden 
+value=off name=hidStatus> <INPUT type=hidden value=N name=Empower> 
+<!-- 검색조건 --><INPUT type=hidden name=hidSrchFlag> <INPUT type=hidden 
+name=hidSrchTitle> <INPUT type=hidden name=hidSrchWriter> <INPUT type=hidden 
+name=hidStartDate> <INPUT type=hidden name=hidEndDate> <INPUT type=hidden 
+value=3 name=Sort> <INPUT type=hidden value=1 name=Order> 
+<!--------------><IFRAME style="DISPLAY: none" name=ifrmTask 
+src="about:blank"></IFRAME>
+<OBJECT id=ocxPlAtt tabIndex=-1 height=0% width=0% 
+classid=clsid:3DBD176D-9851-4B35-93F7-5EAB7D89065A><PARAM NAME="style" VALUE="2"><PARAM NAME="authorization" VALUE="Basic YWRtaW46YWRtaW4="><PARAM NAME="strMsgInfo" VALUE=""><PARAM NAME="submitURL" VALUE=""><PARAM NAME="Auth" VALUE="Basic YWRtaW46YWRtaW4="><PARAM NAME="subject" VALUE="SW 통합의 새로운 물결, SES"><PARAM NAME="formsURL" VALUE="http://kms.plusware.co.kr/Plus2003/forms/"><PARAM NAME="objDataURL" VALUE=""><PARAM NAME="objPostURL" VALUE="43"><PARAM NAME="objComURL" VALUE=""><PARAM NAME="objClsURL" VALUE="B"><PARAM NAME="type" VALUE="db">
+				 				<!-- 게시판 로컬 저장 관련 -->										</OBJECT></FORM></BODY></HTML>

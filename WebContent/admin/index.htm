@@ -1,0 +1,44 @@
+<HTML>
+<HEAD>
+<TITLE>관리자 로그인</TITLE>
+</HEAD>
+
+<BODY style="MARGIN: 0px" text=#000000 bgColor=#ffffff onload="document.login.id.focus()">
+
+<FORM name="login" action="AdminBody.jsp" method="post" onSubmit='return submit()'><BR><BR><BR>
+
+<TABLE cellSpacing=0 cellPadding=0 width=433 align=center border=0>
+  <TBODY>
+  <TR>
+    <TD width=432 colSpan=5>
+      <P><IMG height=239 src="images/login_img.gif" width=433 
+    border=0></P></TD></TR>
+  <TR>
+    <TD width=11 rowSpan=4>
+      <P><IMG height=119 src="images/login_img_botLeft.gif" width=11 
+      border=0></P></TD>
+    <TD width=164>
+      <P align=right><B>아 이 디&nbsp;</B></P></TD>
+    <TD width=233 colSpan=2><INPUT type="text" maxLength=15 size=15 
+    name="id"></TD>
+    <TD width=25 rowSpan=4>
+      <P><IMG height=119 src="images/login_img_botRight.jpg" width=25 
+      border=0></P></TD></TR>
+  <TR>
+    <TD width=164>
+      <P align=right><B>비밀번호&nbsp;</B></P></TD>
+    <TD width=233 colSpan=2><INPUT type=password maxLength=20 size=15 
+      name="password"> </TD></TR>
+  <TR>
+    <TD width=164 height=35>
+      <P align=right>
+	  <input type=image src="images/bt_confirm.gif" border='0'>
+	  </P></TD>
+    <TD width=10></TD>
+    <TD width=223>
+      <P><IMG style="CURSOR: hand" onclick=javascript:history.go(-1) 
+      src="images/bt_cancel.gif" border=0></P></TD></TR>
+  <TR>
+    <TD width=397 colSpan=3>
+      <P><IMG height=38 src="images/login_img_bot.gif" width=397 
+      border=0></P></TD></TR></TBODY></TABLE></FORM></BODY></HTML>

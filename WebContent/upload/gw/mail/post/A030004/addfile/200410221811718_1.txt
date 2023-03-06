@@ -1,0 +1,316 @@
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[bom_master]') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
+drop table [dbo].[bom_master]
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[ebom_assy]') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
+drop table [dbo].[ebom_assy]
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[ebom_history]') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
+drop table [dbo].[ebom_history]
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[ebom_master]') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
+drop table [dbo].[ebom_master]
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[import_pl_directory]') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
+drop table [dbo].[import_pl_directory]
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[import_pl_history]') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
+drop table [dbo].[import_pl_history]
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[import_pl_master]') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
+drop table [dbo].[import_pl_master]
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[mbom_master]') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
+drop table [dbo].[mbom_master]
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[mfg_master]') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
+drop table [dbo].[mfg_master]
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[pl_history]') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
+drop table [dbo].[pl_history]
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[pl_master]') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
+drop table [dbo].[pl_master]
+GO
+
+CREATE TABLE [dbo].[bom_master] (
+	[bm_tid] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[bm_pid] [varchar] (30) COLLATE Korean_Wansung_CI_AS NOT NULL ,
+	[bm_level] [int] NULL ,
+	[bm_pcd] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[bm_ccd] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[bm_qty] [int] NULL ,
+	[bm_pba_id] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[bm_code_type] [varchar] (5) COLLATE Korean_Wansung_CI_AS NULL ,
+	[bm_part_type] [varchar] (5) COLLATE Korean_Wansung_CI_AS NULL ,
+	[bm_location] [varchar] (10) COLLATE Korean_Wansung_CI_AS NULL ,
+	[bm_ocd] [varchar] (10) COLLATE Korean_Wansung_CI_AS NULL ,
+	[bm_status] [varchar] (10) COLLATE Korean_Wansung_CI_AS NULL ,
+	[bm_part_name] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[bm_part_spec] [varchar] (80) COLLATE Korean_Wansung_CI_AS NULL ,
+	[bm_ecno] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[bm_date_add] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[bm_user_add] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[bm_date_del] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[bm_user_del] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[bm_date_mod] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[bm_user_mod] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[bm_plan_start] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[bm_date_start] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[bm_plan_end] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[bm_date_end] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[bm_date_all] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[bm_user_apl] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[bm_user_lock] [varchar] (10) COLLATE Korean_Wansung_CI_AS NULL ,
+	[bm_circ_object] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[bm_circ_status] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[bm_ad] [varchar] (5) COLLATE Korean_Wansung_CI_AS NULL ,
+	[bm_pm] [varchar] (5) COLLATE Korean_Wansung_CI_AS NULL ,
+	[bm_seq] [int] NULL ,
+	[bm_sd] [varchar] (5) COLLATE Korean_Wansung_CI_AS NULL ,
+	[bm_owner] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[bm_price] [varchar] (10) COLLATE Korean_Wansung_CI_AS NULL ,
+	[bm_price_unit] [varchar] (10) COLLATE Korean_Wansung_CI_AS NULL ,
+	[bm_qty_unit] [varchar] (10) COLLATE Korean_Wansung_CI_AS NULL 
+) ON [PRIMARY]
+GO
+
+CREATE TABLE [dbo].[ebom_assy] (
+	[plid] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[pid] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[Aparent_code] [varchar] (20) COLLATE Korean_Wansung_CI_AS NULL ,
+	[Achild_code] [varchar] (20) COLLATE Korean_Wansung_CI_AS NULL ,
+	[Ano] [varchar] (5) COLLATE Korean_Wansung_CI_AS NULL ,
+	[Apart_count] [varchar] (5) COLLATE Korean_Wansung_CI_AS NULL ,
+	[Aref_name] [varchar] (10) COLLATE Korean_Wansung_CI_AS NULL ,
+	[Am_a] [varchar] (2) COLLATE Korean_Wansung_CI_AS NULL ,
+	[Ainsert_type] [varchar] (5) COLLATE Korean_Wansung_CI_AS NULL ,
+	[Aplacement] [varchar] (1) COLLATE Korean_Wansung_CI_AS NULL ,
+	[Amfg_no] [varchar] (10) COLLATE Korean_Wansung_CI_AS NULL ,
+	[Adescription] [varchar] (80) COLLATE Korean_Wansung_CI_AS NULL ,
+	[revision] [varchar] (5) COLLATE Korean_Wansung_CI_AS NULL ,
+	[ebom_date] [varchar] (20) COLLATE Korean_Wansung_CI_AS NULL ,
+	[emod_date] [varchar] (20) COLLATE Korean_Wansung_CI_AS NULL ,
+	[efix_date] [varchar] (20) COLLATE Korean_Wansung_CI_AS NULL ,
+	[ebom_end] [varchar] (5) COLLATE Korean_Wansung_CI_AS NULL ,
+	[eco_date] [varchar] (20) COLLATE Korean_Wansung_CI_AS NULL ,
+	[ecofix_date] [varchar] (20) COLLATE Korean_Wansung_CI_AS NULL ,
+	[eco_end] [varchar] (5) COLLATE Korean_Wansung_CI_AS NULL 
+) ON [PRIMARY]
+GO
+
+CREATE TABLE [dbo].[ebom_history] (
+	[pid] [varchar] (30) COLLATE Korean_Wansung_CI_AS NOT NULL ,
+	[writer] [varchar] (20) COLLATE Korean_Wansung_CI_AS NULL ,
+	[writer_id] [varchar] (10) COLLATE Korean_Wansung_CI_AS NULL ,
+	[writer_dname] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[writer_dcode] [varchar] (10) COLLATE Korean_Wansung_CI_AS NULL ,
+	[writer_tel] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[reviewer] [varchar] (20) COLLATE Korean_Wansung_CI_AS NULL ,
+	[reviewer_id] [varchar] (10) COLLATE Korean_Wansung_CI_AS NULL ,
+	[decision] [varchar] (20) COLLATE Korean_Wansung_CI_AS NULL ,
+	[decision_id] [varchar] (10) COLLATE Korean_Wansung_CI_AS NULL ,
+	[operator] [varchar] (20) COLLATE Korean_Wansung_CI_AS NULL ,
+	[operator_id] [varchar] (10) COLLATE Korean_Wansung_CI_AS NULL ,
+	[prj_name] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[prj_code] [varchar] (20) COLLATE Korean_Wansung_CI_AS NULL ,
+	[pba_name] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[pba_code] [varchar] (20) COLLATE Korean_Wansung_CI_AS NULL ,
+	[fg_name] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[fg_code] [varchar] (20) COLLATE Korean_Wansung_CI_AS NULL ,
+	[main_code] [varchar] (20) COLLATE Korean_Wansung_CI_AS NULL ,
+	[out_code] [varchar] (20) COLLATE Korean_Wansung_CI_AS NULL ,
+	[pcb_kind] [varchar] (10) COLLATE Korean_Wansung_CI_AS NULL ,
+	[pcb_name] [varchar] (50) COLLATE Korean_Wansung_CI_AS NULL ,
+	[draw_desc] [varchar] (80) COLLATE Korean_Wansung_CI_AS NULL ,
+	[write_date] [varchar] (20) COLLATE Korean_Wansung_CI_AS NULL ,
+	[modify_date] [varchar] (20) COLLATE Korean_Wansung_CI_AS NULL ,
+	[modify_flag] [varchar] (5) COLLATE Korean_Wansung_CI_AS NULL ,
+	[revision] [varchar] (5) COLLATE Korean_Wansung_CI_AS NULL ,
+	[plid] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[ebom_date] [varchar] (20) COLLATE Korean_Wansung_CI_AS NULL ,
+	[emod_date] [varchar] (20) COLLATE Korean_Wansung_CI_AS NULL ,
+	[efix_date] [varchar] (20) COLLATE Korean_Wansung_CI_AS NULL ,
+	[ebom_end] [varchar] (5) COLLATE Korean_Wansung_CI_AS NULL ,
+	[eco_date] [varchar] (20) COLLATE Korean_Wansung_CI_AS NULL ,
+	[ecofix_date] [varchar] (20) COLLATE Korean_Wansung_CI_AS NULL ,
+	[eco_end] [varchar] (5) COLLATE Korean_Wansung_CI_AS NULL 
+) ON [PRIMARY]
+GO
+
+CREATE TABLE [dbo].[ebom_master] (
+	[plid] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[tag] [varchar] (1) COLLATE Korean_Wansung_CI_AS NULL ,
+	[pid] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[parent_code] [varchar] (20) COLLATE Korean_Wansung_CI_AS NULL ,
+	[child_code] [varchar] (20) COLLATE Korean_Wansung_CI_AS NULL ,
+	[no] [varchar] (5) COLLATE Korean_Wansung_CI_AS NULL ,
+	[part_count] [varchar] (5) COLLATE Korean_Wansung_CI_AS NULL ,
+	[ref_name] [varchar] (10) COLLATE Korean_Wansung_CI_AS NULL ,
+	[m_a] [varchar] (2) COLLATE Korean_Wansung_CI_AS NULL ,
+	[insert_type] [varchar] (5) COLLATE Korean_Wansung_CI_AS NULL ,
+	[placement] [varchar] (1) COLLATE Korean_Wansung_CI_AS NULL ,
+	[mfg_no] [varchar] (10) COLLATE Korean_Wansung_CI_AS NULL ,
+	[description] [varchar] (80) COLLATE Korean_Wansung_CI_AS NULL ,
+	[revision] [varchar] (5) COLLATE Korean_Wansung_CI_AS NULL ,
+	[ebom_date] [varchar] (20) COLLATE Korean_Wansung_CI_AS NULL ,
+	[emod_date] [varchar] (20) COLLATE Korean_Wansung_CI_AS NULL ,
+	[efix_date] [varchar] (20) COLLATE Korean_Wansung_CI_AS NULL ,
+	[ebom_end] [varchar] (5) COLLATE Korean_Wansung_CI_AS NULL ,
+	[eco_date] [varchar] (20) COLLATE Korean_Wansung_CI_AS NULL ,
+	[ecofix_date] [varchar] (20) COLLATE Korean_Wansung_CI_AS NULL ,
+	[eco_end] [varchar] (5) COLLATE Korean_Wansung_CI_AS NULL 
+) ON [PRIMARY]
+GO
+
+CREATE TABLE [dbo].[import_pl_directory] (
+	[pl_tid] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[pl_level] [int] NULL ,
+	[pl_pcd] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[pl_ccd] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[pl_type] [varchar] (2) COLLATE Korean_Wansung_CI_AS NULL ,
+	[pl_user_id] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL 
+) ON [PRIMARY]
+GO
+
+CREATE TABLE [dbo].[import_pl_history] (
+	[pl_tid] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[pl_pid] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[pl_level] [int] NULL ,
+	[pl_pcd] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[pl_ccd] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[pl_type] [varchar] (2) COLLATE Korean_Wansung_CI_AS NULL ,
+	[pl_user_id] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[pl_model_id] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[pl_model_name] [varchar] (80) COLLATE Korean_Wansung_CI_AS NULL ,
+	[pl_prj_id] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[pl_prj_name] [varchar] (80) COLLATE Korean_Wansung_CI_AS NULL ,
+	[pl_pba_id] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[pl_pba_name] [varchar] (80) COLLATE Korean_Wansung_CI_AS NULL ,
+	[pl_import_date] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[pl_to_bom] [varchar] (5) COLLATE Korean_Wansung_CI_AS NULL ,
+	[pl_company_id] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[pl_company_name] [varchar] (80) COLLATE Korean_Wansung_CI_AS NULL ,
+	[pl_division_id] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[pl_division_name] [varchar] (80) COLLATE Korean_Wansung_CI_AS NULL ,
+	[pl_request_id] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[pl_request_name] [varchar] (80) COLLATE Korean_Wansung_CI_AS NULL ,
+	[pl_request_date] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL 
+) ON [PRIMARY]
+GO
+
+CREATE TABLE [dbo].[import_pl_master] (
+	[pl_tid] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[pl_pid] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[pl_level] [int] NULL ,
+	[pl_pcd] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[pl_ccd] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[pl_qty] [int] NULL ,
+	[pl_code_type] [varchar] (5) COLLATE Korean_Wansung_CI_AS NULL ,
+	[pl_location] [varchar] (10) COLLATE Korean_Wansung_CI_AS NULL ,
+	[pl_ocd] [varchar] (10) COLLATE Korean_Wansung_CI_AS NULL ,
+	[pl_status] [varchar] (10) COLLATE Korean_Wansung_CI_AS NULL ,
+	[pl_part_name] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[pl_part_spec] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[pl_user_lock] [varchar] (10) COLLATE Korean_Wansung_CI_AS NULL ,
+	[pl_circ_object] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[pl_circ_status] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[pl_ad] [varchar] (5) COLLATE Korean_Wansung_CI_AS NULL ,
+	[pl_pm] [varchar] (5) COLLATE Korean_Wansung_CI_AS NULL ,
+	[pl_seq] [int] NULL ,
+	[pl_user_id] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL 
+) ON [PRIMARY]
+GO
+
+CREATE TABLE [dbo].[mbom_master] (
+	[BM_TID] [tinyint] NULL ,
+	[BM_PID] [varchar] (30) COLLATE Korean_Wansung_CI_AS NOT NULL ,
+	[BM_LEVEL] [tinyint] NULL ,
+	[BM_PCD] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[BM_CCD] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[BM_QTY] [int] NULL ,
+	[BM_PBA_ID] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[BM_CODE_TYPE] [varchar] (5) COLLATE Korean_Wansung_CI_AS NULL ,
+	[BM_LOCATION] [varchar] (10) COLLATE Korean_Wansung_CI_AS NULL ,
+	[BM_OCD] [varchar] (10) COLLATE Korean_Wansung_CI_AS NULL ,
+	[BM_STATUS] [varchar] (10) COLLATE Korean_Wansung_CI_AS NULL ,
+	[BM_PART_NAME] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[BM_PART_SPEC] [varchar] (100) COLLATE Korean_Wansung_CI_AS NULL ,
+	[BM_ECNO] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[BM_DATE_ADD] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[BM_USER_ADD] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[BM_DATE_DEL] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[BM_USER_DEL] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[BM_DATE_MOD] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[BM_USER_MOD] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[BM_PLAN_START] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[BM_DATE_START] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[BM_PLAN_END] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[BM_DATE_END] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[BM_DATE_APL] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[BM_USER_APL] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[BM_USER_LOCK] [varchar] (10) COLLATE Korean_Wansung_CI_AS NULL ,
+	[BM_CIRC_OBJECT] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[BM_CIRC_STATUS] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[BM_AD] [varchar] (5) COLLATE Korean_Wansung_CI_AS NULL ,
+	[BM_PM] [varchar] (5) COLLATE Korean_Wansung_CI_AS NULL ,
+	[BM_SEQ] [tinyint] NULL ,
+	[BM_SD] [varchar] (5) COLLATE Korean_Wansung_CI_AS NULL ,
+	[BM_OWNER] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[BM_PRICE] [varchar] (10) COLLATE Korean_Wansung_CI_AS NULL ,
+	[BM_PRICE_UNIT] [varchar] (10) COLLATE Korean_Wansung_CI_AS NULL ,
+	[BM_QTY_UNIT] [varchar] (10) COLLATE Korean_Wansung_CI_AS NULL 
+) ON [PRIMARY]
+GO
+
+CREATE TABLE [dbo].[mfg_master] (
+	[pid] [varchar] (30) COLLATE Korean_Wansung_CI_AS NOT NULL ,
+	[mfg_code] [varchar] (10) COLLATE Korean_Wansung_CI_AS NOT NULL ,
+	[mfg_flag] [varchar] (10) COLLATE Korean_Wansung_CI_AS NULL ,
+	[mfg_desc] [varchar] (80) COLLATE Korean_Wansung_CI_AS NULL ,
+	[mfg_seq] [int] NOT NULL ,
+	[mfg_assy] [varchar] (5) COLLATE Korean_Wansung_CI_AS NOT NULL 
+) ON [PRIMARY]
+GO
+
+CREATE TABLE [dbo].[pl_history] (
+	[plid] [varchar] (30) COLLATE Korean_Wansung_CI_AS NOT NULL ,
+	[check_prs] [varchar] (1) COLLATE Korean_Wansung_CI_AS NULL ,
+	[pid] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[fg_code] [varchar] (20) COLLATE Korean_Wansung_CI_AS NULL ,
+	[pcb_name] [varchar] (50) COLLATE Korean_Wansung_CI_AS NULL ,
+	[writer] [varchar] (20) COLLATE Korean_Wansung_CI_AS NULL ,
+	[writer_id] [varchar] (10) COLLATE Korean_Wansung_CI_AS NULL ,
+	[write_date] [varchar] (20) COLLATE Korean_Wansung_CI_AS NULL ,
+	[modify_date] [varchar] (20) COLLATE Korean_Wansung_CI_AS NULL ,
+	[delete_date] [varchar] (20) COLLATE Korean_Wansung_CI_AS NULL ,
+	[change_prs] [varchar] (5) COLLATE Korean_Wansung_CI_AS NULL ,
+	[draw_desc] [varchar] (80) COLLATE Korean_Wansung_CI_AS NULL 
+) ON [PRIMARY]
+GO
+
+CREATE TABLE [dbo].[pl_master] (
+	[plid] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[trans] [varchar] (1) COLLATE Korean_Wansung_CI_AS NULL ,
+	[pid] [varchar] (30) COLLATE Korean_Wansung_CI_AS NULL ,
+	[ref_name] [varchar] (10) COLLATE Korean_Wansung_CI_AS NULL ,
+	[part_code] [varchar] (20) COLLATE Korean_Wansung_CI_AS NULL ,
+	[m_a] [varchar] (2) COLLATE Korean_Wansung_CI_AS NULL ,
+	[insert_type] [varchar] (5) COLLATE Korean_Wansung_CI_AS NULL ,
+	[placement] [varchar] (1) COLLATE Korean_Wansung_CI_AS NULL ,
+	[mfg_no] [varchar] (10) COLLATE Korean_Wansung_CI_AS NULL ,
+	[description] [varchar] (80) COLLATE Korean_Wansung_CI_AS NULL ,
+	[pt_change] [varchar] (5) COLLATE Korean_Wansung_CI_AS NULL ,
+	[chg_mfg] [varchar] (5) COLLATE Korean_Wansung_CI_AS NULL 
+) ON [PRIMARY]
+GO
+

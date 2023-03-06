@@ -1,0 +1,19 @@
+DN_001	OE_CHUL			A   외출         
+DN_002  CHULJANG_SINCHEONG	B   출장신청        
+DN_003  HYU_GA 			C   휴가      
+DN_004  BAE_CHA  		D   배차     
+DN_005  GENER  			E       
+DN_006  BOGO 			F   보고     
+DN_007  CHULJANG_BOGO  		G   출장보고     
+DN_008  GIAN   			H   기안    
+DN_009  MYEONGHAM   		I   명함    
+DN_010  SAYU   			J   사유   
+DN_011  HYEOPJO    		K   협조  
+DN_012  YEONJANG   		L   연장    
+DN_013  GUIN   			M   구인   
+DN_014  GYOYUK_ILJI   		N   교육일지   
+DN_015  GEN   			O   일반보고   
+DN_016  ODT   			P   공지공문    
+DN_017  IDS   			Q   사내문서   
+DN_018  ODS   			R   사외문서   
+     
